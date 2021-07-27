@@ -538,8 +538,24 @@ namespace MissionPlanner.GCSViews.Setups.Views
                 {
                     var useStartPlace = Configurator.Setting.General.UseAlternateAirfieldStartPlace ? 1 : 0;
                     var homeReturnSpeed = ConvertHomeReturnSpeedToSantimeters( Configurator.Setting.General.HomeReturnSpeed );
-                    var begPart = float.Parse( tbIdUav.Text.Substring( 0, 4 ) );
-                    var endPart = float.Parse( tbIdUav.Text.Substring( 4 ) );
+                    
+                    float begPart = 0;
+                    float endPart = 0;
+
+                    if ( tbIdUav.Text != string.Empty )
+                    {
+                        if ( tbIdUav.Text.Length > 4 )
+                        {
+                            begPart = float.Parse( tbIdUav.Text.Substring( 0, 4 ) );
+                            endPart = float.Parse( tbIdUav.Text.Substring( 4 ) );
+                        }
+                        else
+                        {
+                            begPart = float.Parse( tbIdUav.Text );
+                            endPart = 0;
+                        }
+                    }
+
                     var gpsFailtureActionn = rbLanding.Checked ? 0 : 0.8;
                     var circleRadius = int.Parse( tbPatrolRadius.Text ) * 100;
 
