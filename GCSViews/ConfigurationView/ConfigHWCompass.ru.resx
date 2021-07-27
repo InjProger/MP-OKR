@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="linkLabelmagdec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 72</value>
+  </data>
+  <data name="linkLabelmagdec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 13</value>
+  </data>
+  <data name="linkLabelmagdec.Text" xml:space="preserve">
+    <value>Веб-сайт склонения</value>
+  </data>
+  <data name="TXT_declination_deg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 49</value>
+  </data>
+  <data name="CHK_autodec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 27</value>
+  </data>
+  <data name="CHK_autodec.Text" xml:space="preserve">
+    <value>Автоматическое определение смещения</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Компас</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>708, 5</value>
+  </data>
+  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 25</value>
+  </data>
+  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>Youtube пример</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Выберите устройство для быстрой настройки:</value>
+  </data>
+  <data name="TXT_declination_min.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 48</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 52</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Градусы</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 51</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Минуты</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 136</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 26</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Проверьте пригодность,
+если калибровка не удалась</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Пригодность</value>
+  </data>
+  <data name="BUT_OBmagcalaccept.Text" xml:space="preserve">
+    <value>Принять</value>
+  </data>
+  <data name="BUT_OBmagcalcancel.Text" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="BUT_OBmagcalstart.Text" xml:space="preserve">
+    <value>Старт</value>
+  </data>
+  <data name="groupBoxonboardcalib.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 185</value>
+  </data>
+  <data name="groupBoxonboardcalib.Text" xml:space="preserve">
+    <value>Встроенная калибровка MAG</value>
+  </data>
+  <data name="BUT_MagCalibrationLive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 46</value>
+  </data>
+  <data name="BUT_MagCalibrationLive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 26</value>
+  </data>
+  <data name="BUT_MagCalibrationLive.Text" xml:space="preserve">
+    <value>Живая калибровка</value>
+  </data>
+  <data name="groupBoxmpcalib.Location" type="System.Drawing.Point, System.Drawing">
+    <value>486, 326</value>
+  </data>
+  <data name="groupBoxmpcalib.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 72</value>
+  </data>
+  <data name="groupBoxmpcalib.Text" xml:space="preserve">
+    <value>Калибровка Mission Planner Mag </value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 326</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>ИЛИ</value>
+  </data>
+  <data name="LBL_primary_compass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
+  </data>
+  <data name="LBL_primary_compass.Text" xml:space="preserve">
+    <value>Главный компас:</value>
+  </data>
+  <data name="CHK_compass_learn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 15</value>
+  </data>
+  <data name="CHK_compass_learn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 38</value>
+  </data>
+  <data name="CHK_compass_learn.Text" xml:space="preserve">
+    <value>Автоматически запоминать смещения</value>
+  </data>
+  <data name="groupBoxGeneralSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>688, 94</value>
+  </data>
+  <data name="groupBoxGeneralSettings.Text" xml:space="preserve">
+    <value>Общие настройки компаса</value>
+  </data>
+  <data name="LBL_compass1_offset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="LBL_compass1_offset.Text" xml:space="preserve">
+    <value>Смещение</value>
+  </data>
+  <data name="CHK_compass1_external.Text" xml:space="preserve">
+    <value>Внешнее монтирование</value>
+  </data>
+  <data name="CHK_compass1_use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 23</value>
+  </data>
+  <data name="CHK_compass1_use.Text" xml:space="preserve">
+    <value>Использовать этот компас</value>
+  </data>
+  <data name="groupBoxCompass1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 150</value>
+  </data>
+  <data name="groupBoxCompass1.Text" xml:space="preserve">
+    <value>Компас #1</value>
+  </data>
+  <data name="LBL_compass2_offset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="LBL_compass2_offset.Text" xml:space="preserve">
+    <value>Смещение</value>
+  </data>
+  <data name="CHK_compass2_external.Text" xml:space="preserve">
+    <value>Внешнее монтирование</value>
+  </data>
+  <data name="CHK_compass2_use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 23</value>
+  </data>
+  <data name="CHK_compass2_use.Text" xml:space="preserve">
+    <value>Использовать этот компас</value>
+  </data>
+  <data name="groupBoxCompass2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 162</value>
+  </data>
+  <data name="groupBoxCompass2.Text" xml:space="preserve">
+    <value>Компас #2</value>
+  </data>
+  <data name="LBL_compass3_offset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="LBL_compass3_offset.Text" xml:space="preserve">
+    <value>Смещение</value>
+  </data>
+  <data name="CHK_compass3_external.Text" xml:space="preserve">
+    <value>Внешнее монтирование</value>
+  </data>
+  <data name="CHK_compass3_use.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 23</value>
+  </data>
+  <data name="CHK_compass3_use.Text" xml:space="preserve">
+    <value>Использовать этот компас</value>
+  </data>
+  <data name="groupBoxCompass3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 162</value>
+  </data>
+  <data name="groupBoxCompass3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 150</value>
+  </data>
+  <data name="groupBoxCompass3.Text" xml:space="preserve">
+    <value>Компас #3</value>
+  </data>
+  <data name="buttonAPMExternal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>542, 33</value>
+  </data>
+  <data name="buttonAPMExternal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 23</value>
+  </data>
+  <data name="buttonAPMExternal.Text" xml:space="preserve">
+    <value>APM и внешний компас</value>
+  </data>
+  <data name="QuickAPM25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>375, 33</value>
+  </data>
+  <data name="QuickAPM25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 23</value>
+  </data>
+  <data name="QuickAPM25.Text" xml:space="preserve">
+    <value>APM2.5 (Внутренний компас)</value>
+  </data>
+  <data name="buttonQuickPixhawk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 33</value>
+  </data>
+  <data name="but_largemagcal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>486, 414</value>
+  </data>
+  <data name="but_largemagcal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 26</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>714, 524</value>
+  </data>
+</root>

@@ -1,0 +1,8 @@
+﻿<Properties StartupConfiguration="{E64A1A41-A5B0-458E-8284-BB63705354DA}|Default" StartupItem="MissionPlanner.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench />
+</Properties>

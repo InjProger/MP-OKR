@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnMinus.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPlus.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblSpent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 2</value>
+  </data>
+  <data name="lblSpent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 21</value>
+  </data>
+  <data name="lblSpent.Text" xml:space="preserve">
+    <value>Потр.</value>
+  </data>
+  <data name="lblSpent.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRemaining.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 2</value>
+  </data>
+  <data name="lblRemaining.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 21</value>
+  </data>
+  <data name="lblRemaining.Text" xml:space="preserve">
+    <value>Ост.</value>
+  </data>
+  <data name="lblRemaining.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 21</value>
+  </data>
+  <data name="lblTime.Text" xml:space="preserve">
+    <value>Врм. (мин)</value>
+  </data>
+  <data name="lblTime.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDistance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 21</value>
+  </data>
+  <data name="lblDistance.Text" xml:space="preserve">
+    <value>Расст. (м)</value>
+  </data>
+  <data name="lblDistance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblBattery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 21</value>
+  </data>
+  <data name="lblBattery.Text" xml:space="preserve">
+    <value>Бтр. (мAч)</value>
+  </data>
+  <data name="lblBattery.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRemainingTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 25</value>
+  </data>
+  <data name="lblRemainingTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 21</value>
+  </data>
+  <data name="lblRemainingTime.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSpentTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 25</value>
+  </data>
+  <data name="lblSpentTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 21</value>
+  </data>
+  <data name="lblSpentTime.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSpentDistance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 48</value>
+  </data>
+  <data name="lblSpentDistance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 21</value>
+  </data>
+  <data name="lblSpentDistance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRemainingDistance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 48</value>
+  </data>
+  <data name="lblRemainingDistance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 21</value>
+  </data>
+  <data name="lblRemainingDistance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRemainingBattery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 71</value>
+  </data>
+  <data name="lblRemainingBattery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 21</value>
+  </data>
+  <data name="lblRemainingBattery.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSpentBattery.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 71</value>
+  </data>
+  <data name="lblSpentBattery.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 21</value>
+  </data>
+  <data name="lblSpentBattery.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFlight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 20</value>
+  </data>
+  <data name="lblFlight.Text" xml:space="preserve">
+    <value>ПОЛЁТ</value>
+  </data>
+  <data name="lblFlight.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbLTheFall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 1</value>
+  </data>
+  <data name="lbLTheFall.Text" xml:space="preserve">
+    <value>ПАДЕНИЕ</value>
+  </data>
+  <data name="lbLTheFall.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 15</value>
+  </data>
+  <data name="tableLayoutPanel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 15</value>
+  </data>
+  <data name="panel4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tlpFT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 117</value>
+  </data>
+  <data name="tlpFT.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pFlightCalculation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>658, 3</value>
+  </data>
+  <data name="pFlightCalculation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 117</value>
+  </data>
+  <data name="pFlightCalculation.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trackBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 394</value>
+  </data>
+  <data name="trackBar1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MainMap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 394</value>
+  </data>
+  <data name="MainMap.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_homealt.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_homelat.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_homelng.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="coords1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CMB_altmode.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb_missiontype.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CHK_splinedefault.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chk_grid.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_status.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnk_kml.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_altwarn.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_homedist.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LBL_WPRad.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_wpfile.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BUT_loadwpfile.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BUT_saveWPFile.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="but_writewpfast.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BUT_write.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BUT_read.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_loiterrad.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_prevdist.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LBL_defalutalt.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_distance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_DefaultAlt.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BUT_Add.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CHK_verifyheight.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_WPRad.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="but_mincommands.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 394</value>
+  </data>
+  <data name="panelMap.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainer1.Panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Command.HeaderText" xml:space="preserve">
+    <value>Команда</value>
+  </data>
+  <data name="Command.ToolTipText" xml:space="preserve">
+    <value>Команда</value>
+  </data>
+  <data name="Frame.HeaderText" xml:space="preserve">
+    <value>Вид высоты</value>
+  </data>
+  <data name="Dist.HeaderText" xml:space="preserve">
+    <value>Дист</value>
+  </data>
+  <data name="Up.HeaderText" xml:space="preserve">
+    <value>Вв</value>
+  </data>
+  <data name="Up.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAGxJREFUOE/dy0ESgCAMQ1Huf2nE9qOAbYFx3Pg2DE2S8gvROAk+FjvTWYugZ1yp
+        PxA3xhNFB6Wq+1MJURX3h3ABg2vMeRkrHss88uKChuOM4jhOo8Y80keRVMFRfTY2URV/GBdUHJSq8b8h
+        5wPkbkPZ/Kz15wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Down.HeaderText" xml:space="preserve">
+    <value>Вн</value>
+  </data>
+  <data name="Down.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAGtJREFUOE/dy0ESgCAMQ1Huf2ms9DNDEVIdXfk2DE1S6gvzuEiUuvCnIlFtfjgW
+        R/fFmCTKo11saGyckY51qhp5xPMQK38M5xsYjGNDKFFtwsdQ2aDUzX9D8YJ4sDgZ6gOCaH11YuZUlqj1
+        AIlYQ9mY+lgaAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Delete.HeaderText" xml:space="preserve">
+    <value>Удл</value>
+  </data>
+  <data name="Delete.ToolTipText" xml:space="preserve">
+    <value>Удалить строку</value>
+  </data>
+  <data name="colLatDeg.HeaderText" xml:space="preserve">
+    <value>Шир</value>
+  </data>
+  <data name="colLonDeg.HeaderText" xml:space="preserve">
+    <value>Дол</value>
+  </data>
+  <data name="Commands.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 137</value>
+  </data>
+  <data name="Commands.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWaypoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 137</value>
+  </data>
+  <data name="panelWaypoints.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBASE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 137</value>
+  </data>
+  <data name="panelBASE.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainer1.Panel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 535</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>394</value>
+  </data>
+  <data name="splitContainer1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStrip1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStripPoly.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStripZoom.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTBValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 535</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorMissionCaption" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="errorMissionText" xml:space="preserve">
+    <value>Нет созданной миссии </value>
+  </data>
+  <data name="savedText" xml:space="preserve">
+    <value>Сохранено:</value>
+  </data>
+  <data name="mbEditAltitude.Caption" xml:space="preserve">
+    <value>Стартовая высота</value>
+  </data>
+  <data name="mbEditAltitude.Text" xml:space="preserve">
+    <value>Стартовая высота</value>
+  </data>
+  <data name="mbEditAltitudeCaption" xml:space="preserve">
+    <value>Изменение высоты</value>
+  </data>
+  <data name="mbEditAltitudeText" xml:space="preserve">
+    <value>Изменение высоты</value>
+  </data>
+  <data name="mbIncorrectHomeAltitudeCaption" xml:space="preserve">
+    <value>Неправильная высота</value>
+  </data>
+  <data name="mbIncorrectHomeAltitudeText" xml:space="preserve">
+    <value>Неправильная высота</value>
+  </data>
+  <data name="mbNotEnterHomeAltitudeCaption" xml:space="preserve">
+    <value>Высота не указана</value>
+  </data>
+  <data name="mbNotEnterHomeAltitudeText" xml:space="preserve">
+    <value>Высота не указана</value>
+  </data>
+</root>
