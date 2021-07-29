@@ -189,11 +189,8 @@
         dD9GFt37O8xOX2HPHUknyUZMjfTM3QNwkv0PxwurFIMmw38AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnHome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 3</value>
-  </data>
   <data name="btnHome.Text" xml:space="preserve">
-    <value>&amp;Дом</value>
+    <value>&amp;НПУ</value>
   </data>
   <data name="panelSplit1.Location" type="System.Drawing.Point, System.Drawing">
     <value>264, 2</value>
@@ -491,7 +488,7 @@
     <value>3, 3</value>
   </data>
   <data name="btnStartPlace.Text" xml:space="preserve">
-    <value>&amp;Старт</value>
+    <value>&amp;Тчк. Взлёта</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 86</value>

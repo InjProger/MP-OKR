@@ -123,66 +123,14 @@
   <data name="btnOk.Text" xml:space="preserve">
     <value>ОК</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="rbAutoManeuvering.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 29</value>
-  </data>
-  <data name="rbAutoManeuvering.Text" xml:space="preserve">
-    <value>Автоманеврирование</value>
-  </data>
-  <data name="rbLanding.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 29</value>
-  </data>
-  <data name="rbLanding.Text" xml:space="preserve">
-    <value>Посадка</value>
-  </data>
   <data name="gbGpsFailtureActions.Text" xml:space="preserve">
     <value>Действия при отказе GPS</value>
-  </data>
-  <data name="cbCheckAlternateAirfields.Text" xml:space="preserve">
-    <value>Проверять</value>
   </data>
   <data name="bgAlternateAerodromesPresence.Text" xml:space="preserve">
     <value>Наличие запасных аэродромов</value>
   </data>
-  <data name="rbBallistic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 88</value>
-  </data>
-  <data name="rbBallistic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 39</value>
-  </data>
-  <data name="rbBallistic.Text" xml:space="preserve">
-    <value>&amp;Баллистический</value>
-  </data>
-  <data name="rbRegular.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 37</value>
-  </data>
-  <data name="rbRegular.Size" type="System.Drawing.Size, System.Drawing">
-    <value>272, 34</value>
-  </data>
-  <data name="rbRegular.Text" xml:space="preserve">
-    <value>&amp;Обычный</value>
-  </data>
   <data name="gbCrossHairType.Text" xml:space="preserve">
     <value>Тип перекрестия</value>
-  </data>
-  <data name="rbIkrlAutoLanding.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 96</value>
-  </data>
-  <data name="rbIkrlAutoLanding.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 29</value>
-  </data>
-  <data name="rbIkrlAutoLanding.Text" xml:space="preserve">
-    <value>Автопосадка</value>
-  </data>
-  <data name="rbIkrlTakeoffPoint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 46</value>
-  </data>
-  <data name="rbIkrlTakeoffPoint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>567, 29</value>
-  </data>
-  <data name="rbIkrlTakeoffPoint.Text" xml:space="preserve">
-    <value>Лететь домой или на ближайший запасной аэродром</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="gbIkrlFailureActions.TabIndex" type="System.Int32, mscorlib">
@@ -190,6 +138,23 @@
   </data>
   <data name="gbIkrlFailureActions.Text" xml:space="preserve">
     <value>Действия при отказе ИКРЛ</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tbHomeReturnAltitude.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tbHomeReturnAltitude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 31</value>
+  </data>
+  <data name="tbHomeReturnAltitude.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbHomeReturnAltitude.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblHomeReturnAltitude.Text" xml:space="preserve">
+    <value>Высота автовозврата (м)</value>
   </data>
   <data name="lblHomeReturnSpeed.Text" xml:space="preserve">
     <value>Скорость полёта домой (м/c)</value>
@@ -218,6 +183,69 @@
   <data name="gbAutoMode.Text" xml:space="preserve">
     <value>Автоматический режим</value>
   </data>
+  <data name="gbLowBatteryActions.Text" xml:space="preserve">
+    <value>Действия при низком заряде АКБ</value>
+  </data>
+  <data name="tpGeneral.Text" xml:space="preserve">
+    <value>Основные</value>
+  </data>
+  <data name="tpInterface.Text" xml:space="preserve">
+    <value>Интерфейс</value>
+  </data>
+  <data name="tpUpScreen.Text" xml:space="preserve">
+    <value>Верхний экран</value>
+  </data>
+  <data name="rbAutoManeuvering.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 29</value>
+  </data>
+  <data name="rbAutoManeuvering.Text" xml:space="preserve">
+    <value>Автоманеврирование</value>
+  </data>
+  <data name="rbLanding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 29</value>
+  </data>
+  <data name="rbLanding.Text" xml:space="preserve">
+    <value>Посадка</value>
+  </data>
+  <data name="cbCheckAlternateAirfields.Text" xml:space="preserve">
+    <value>Проверять</value>
+  </data>
+  <data name="rbBallistic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 88</value>
+  </data>
+  <data name="rbBallistic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 39</value>
+  </data>
+  <data name="rbBallistic.Text" xml:space="preserve">
+    <value>&amp;Баллистический</value>
+  </data>
+  <data name="rbRegular.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 37</value>
+  </data>
+  <data name="rbRegular.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 34</value>
+  </data>
+  <data name="rbRegular.Text" xml:space="preserve">
+    <value>&amp;Обычный</value>
+  </data>
+  <data name="rbIkrlAutoLanding.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 96</value>
+  </data>
+  <data name="rbIkrlAutoLanding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 29</value>
+  </data>
+  <data name="rbIkrlAutoLanding.Text" xml:space="preserve">
+    <value>Автопосадка</value>
+  </data>
+  <data name="rbIkrlTakeoffPoint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 46</value>
+  </data>
+  <data name="rbIkrlTakeoffPoint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>567, 29</value>
+  </data>
+  <data name="rbIkrlTakeoffPoint.Text" xml:space="preserve">
+    <value>Лететь домой или на ближайший запасной аэродром</value>
+  </data>
   <data name="lblCrtBatteryAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>284, 33</value>
   </data>
@@ -229,9 +257,6 @@
   </data>
   <data name="lblLowBatteryAction.Text" xml:space="preserve">
     <value>Действие при 30% заряда</value>
-  </data>
-  <data name="gbLowBatteryActions.Text" xml:space="preserve">
-    <value>Действия при низком заряде АКБ</value>
   </data>
   <data name="btnGpsOff.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -281,8 +306,11 @@
         E9bYCWvshDV2who7YY192O7+AJM+cIntKXuOAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="tpGeneral.Text" xml:space="preserve">
-    <value>Основные</value>
+  <data name="gbSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 255</value>
+  </data>
+  <data name="gbSpeed.Text" xml:space="preserve">
+    <value>Скорость</value>
   </data>
   <data name="rbKm_h.Text" xml:space="preserve">
     <value>&amp;Км/Ч</value>
@@ -293,11 +321,11 @@
   <data name="rbM_S.Text" xml:space="preserve">
     <value>&amp;М/С</value>
   </data>
-  <data name="gbSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 255</value>
+  <data name="gbCoordinateSystem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 181</value>
   </data>
-  <data name="gbSpeed.Text" xml:space="preserve">
-    <value>Скорость</value>
+  <data name="gbCoordinateSystem.Text" xml:space="preserve">
+    <value>Система координат</value>
   </data>
   <data name="rbWgs84Deg.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 46</value>
@@ -317,20 +345,11 @@
   <data name="rbWGS_84.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 93</value>
   </data>
-  <data name="gbCoordinateSystem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 181</value>
-  </data>
-  <data name="gbCoordinateSystem.Text" xml:space="preserve">
-    <value>Система координат</value>
-  </data>
   <data name="lblLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 25</value>
   </data>
   <data name="lblLanguage.Text" xml:space="preserve">
     <value>Язык</value>
-  </data>
-  <data name="tpInterface.Text" xml:space="preserve">
-    <value>Интерфейс</value>
   </data>
   <data name="cbIndicators.Text" xml:space="preserve">
     <value>Все</value>
@@ -392,6 +411,9 @@
   <data name="cbCrossMark.Text" xml:space="preserve">
     <value>Прицел</value>
   </data>
+  <data name="UavParamBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 236</value>
+  </data>
   <data name="cbLatitude.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 29</value>
   </data>
@@ -449,8 +471,8 @@
   <data name="cbPitchAngle.Text" xml:space="preserve">
     <value>Угол тангажа</value>
   </data>
-  <data name="UavParamBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>488, 236</value>
+  <data name="BatteryBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 419</value>
   </data>
   <data name="cbBatteryVoltage.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 18</value>
@@ -482,8 +504,8 @@
   <data name="cbBatteryTimeLeft.Text" xml:space="preserve">
     <value>Оставшееся врем. </value>
   </data>
-  <data name="BatteryBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 419</value>
+  <data name="TargetBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 525</value>
   </data>
   <data name="cbTarLon.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 145</value>
@@ -512,8 +534,8 @@
   <data name="cbTargetWidth.Text" xml:space="preserve">
     <value>Ширина цели</value>
   </data>
-  <data name="TargetBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 525</value>
+  <data name="OtherParamBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 638</value>
   </data>
   <data name="cbWeaponStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 572</value>
@@ -595,12 +617,6 @@
   </data>
   <data name="cbHorizontalSpeed.Text" xml:space="preserve">
     <value>Горизонтальная скорость</value>
-  </data>
-  <data name="OtherParamBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 638</value>
-  </data>
-  <data name="tpUpScreen.Text" xml:space="preserve">
-    <value>Верхний экран</value>
   </data>
   <data name="rbHomeReturn.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 29</value>
@@ -731,11 +747,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Параметры</value>
-  </data>
-  <data name="mbLanguageCaption" xml:space="preserve">
-    <value>Смена языка</value>
-  </data>
-  <data name="mbLanguageText" xml:space="preserve">
-    <value>Перезапуск программы</value>
   </data>
 </root>

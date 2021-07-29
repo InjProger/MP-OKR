@@ -47,6 +47,8 @@
             this.rbIkrlTakeoffPoint = new System.Windows.Forms.RadioButton();
             this.gbAutoMode = new System.Windows.Forms.GroupBox();
             this.tlpAutoMode = new System.Windows.Forms.TableLayoutPanel();
+            this.tbHomeReturnAltitude = new MissionPlanner.Controls.TextBoxes.IntTextBox();
+            this.lblHomeReturnAltitude = new System.Windows.Forms.Label();
             this.tbHomeReturnSpeed = new MissionPlanner.Controls.TextBoxes.IntTextBox();
             this.lblHomeReturnSpeed = new System.Windows.Forms.Label();
             this.cbUseAlternateAirfieldStartPlace = new System.Windows.Forms.CheckBox();
@@ -184,26 +186,26 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnOk
             // 
-            this.btnOk.DialogResult = System.Windows.Forms.DialogResult.Yes;
             resources.ApplyResources(this.btnOk, "btnOk");
+            this.btnOk.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.btnOk.Name = "btnOk";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.BtnOk_Click);
             // 
             // tabControl
             // 
+            resources.ApplyResources(this.tabControl, "tabControl");
             this.tabControl.Controls.Add(this.tpGeneral);
             this.tabControl.Controls.Add(this.tpInterface);
             this.tabControl.Controls.Add(this.tpUpScreen);
-            resources.ApplyResources(this.tabControl, "tabControl");
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             // 
@@ -228,9 +230,9 @@
             // 
             // gbGpsFailtureActions
             // 
+            resources.ApplyResources(this.gbGpsFailtureActions, "gbGpsFailtureActions");
             this.gbGpsFailtureActions.Controls.Add(this.rbAutoManeuvering);
             this.gbGpsFailtureActions.Controls.Add(this.rbLanding);
-            resources.ApplyResources(this.gbGpsFailtureActions, "gbGpsFailtureActions");
             this.gbGpsFailtureActions.Name = "gbGpsFailtureActions";
             this.gbGpsFailtureActions.TabStop = false;
             // 
@@ -250,8 +252,8 @@
             // 
             // bgAlternateAerodromesPresence
             // 
-            this.bgAlternateAerodromesPresence.Controls.Add(this.cbCheckAlternateAirfields);
             resources.ApplyResources(this.bgAlternateAerodromesPresence, "bgAlternateAerodromesPresence");
+            this.bgAlternateAerodromesPresence.Controls.Add(this.cbCheckAlternateAirfields);
             this.bgAlternateAerodromesPresence.Name = "bgAlternateAerodromesPresence";
             this.bgAlternateAerodromesPresence.TabStop = false;
             // 
@@ -263,9 +265,9 @@
             // 
             // gbCrossHairType
             // 
+            resources.ApplyResources(this.gbCrossHairType, "gbCrossHairType");
             this.gbCrossHairType.Controls.Add(this.rbBallistic);
             this.gbCrossHairType.Controls.Add(this.rbRegular);
-            resources.ApplyResources(this.gbCrossHairType, "gbCrossHairType");
             this.gbCrossHairType.Name = "gbCrossHairType";
             this.gbCrossHairType.TabStop = false;
             // 
@@ -277,17 +279,17 @@
             // 
             // rbRegular
             // 
-            this.rbRegular.Checked = true;
             resources.ApplyResources(this.rbRegular, "rbRegular");
+            this.rbRegular.Checked = true;
             this.rbRegular.Name = "rbRegular";
             this.rbRegular.TabStop = true;
             this.rbRegular.UseVisualStyleBackColor = true;
             // 
             // gbIkrlFailureActions
             // 
+            resources.ApplyResources(this.gbIkrlFailureActions, "gbIkrlFailureActions");
             this.gbIkrlFailureActions.Controls.Add(this.rbIkrlAutoLanding);
             this.gbIkrlFailureActions.Controls.Add(this.rbIkrlTakeoffPoint);
-            resources.ApplyResources(this.gbIkrlFailureActions, "gbIkrlFailureActions");
             this.gbIkrlFailureActions.Name = "gbIkrlFailureActions";
             this.gbIkrlFailureActions.TabStop = false;
             // 
@@ -307,17 +309,19 @@
             // 
             // gbAutoMode
             // 
-            this.gbAutoMode.Controls.Add(this.tlpAutoMode);
             resources.ApplyResources(this.gbAutoMode, "gbAutoMode");
+            this.gbAutoMode.Controls.Add(this.tlpAutoMode);
             this.gbAutoMode.Name = "gbAutoMode";
             this.gbAutoMode.TabStop = false;
             // 
             // tlpAutoMode
             // 
             resources.ApplyResources(this.tlpAutoMode, "tlpAutoMode");
+            this.tlpAutoMode.Controls.Add(this.tbHomeReturnAltitude, 1, 7);
+            this.tlpAutoMode.Controls.Add(this.lblHomeReturnAltitude, 0, 7);
             this.tlpAutoMode.Controls.Add(this.tbHomeReturnSpeed, 1, 6);
             this.tlpAutoMode.Controls.Add(this.lblHomeReturnSpeed, 0, 6);
-            this.tlpAutoMode.Controls.Add(this.cbUseAlternateAirfieldStartPlace, 0, 7);
+            this.tlpAutoMode.Controls.Add(this.cbUseAlternateAirfieldStartPlace, 0, 8);
             this.tlpAutoMode.Controls.Add(this.lblIterationCount, 0, 5);
             this.tlpAutoMode.Controls.Add(this.lblIdUav, 0, 0);
             this.tlpAutoMode.Controls.Add(this.tbIterationInstructionCount, 1, 5);
@@ -331,6 +335,19 @@
             this.tlpAutoMode.Controls.Add(this.lblSpeed, 0, 2);
             this.tlpAutoMode.Controls.Add(this.lblPatrolRadius, 0, 4);
             this.tlpAutoMode.Name = "tlpAutoMode";
+            // 
+            // tbHomeReturnAltitude
+            // 
+            resources.ApplyResources(this.tbHomeReturnAltitude, "tbHomeReturnAltitude");
+            this.tbHomeReturnAltitude.Max = 100;
+            this.tbHomeReturnAltitude.Min = 0;
+            this.tbHomeReturnAltitude.Name = "tbHomeReturnAltitude";
+            this.tbHomeReturnAltitude.Value = 0;
+            // 
+            // lblHomeReturnAltitude
+            // 
+            resources.ApplyResources(this.lblHomeReturnAltitude, "lblHomeReturnAltitude");
+            this.lblHomeReturnAltitude.Name = "lblHomeReturnAltitude";
             // 
             // tbHomeReturnSpeed
             // 
@@ -432,26 +449,33 @@
             // 
             // gbLowBatteryActions
             // 
+            resources.ApplyResources(this.gbLowBatteryActions, "gbLowBatteryActions");
             this.gbLowBatteryActions.Controls.Add(this.cmbCrtBatteryActions);
             this.gbLowBatteryActions.Controls.Add(this.cmbLowBatteryActions);
             this.gbLowBatteryActions.Controls.Add(this.lblCrtBatteryAction);
             this.gbLowBatteryActions.Controls.Add(this.lblLowBatteryAction);
-            resources.ApplyResources(this.gbLowBatteryActions, "gbLowBatteryActions");
             this.gbLowBatteryActions.Name = "gbLowBatteryActions";
             this.gbLowBatteryActions.TabStop = false;
             // 
             // cmbCrtBatteryActions
             // 
+            resources.ApplyResources(this.cmbCrtBatteryActions, "cmbCrtBatteryActions");
             this.cmbCrtBatteryActions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCrtBatteryActions.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbCrtBatteryActions, "cmbCrtBatteryActions");
+            this.cmbCrtBatteryActions.Items.AddRange(new object[] {
+            resources.GetString("cmbCrtBatteryActions.Items"),
+            resources.GetString("cmbCrtBatteryActions.Items1")});
             this.cmbCrtBatteryActions.Name = "cmbCrtBatteryActions";
             // 
             // cmbLowBatteryActions
             // 
+            resources.ApplyResources(this.cmbLowBatteryActions, "cmbLowBatteryActions");
             this.cmbLowBatteryActions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLowBatteryActions.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbLowBatteryActions, "cmbLowBatteryActions");
+            this.cmbLowBatteryActions.Items.AddRange(new object[] {
+            resources.GetString("cmbLowBatteryActions.Items"),
+            resources.GetString("cmbLowBatteryActions.Items1"),
+            resources.GetString("cmbLowBatteryActions.Items2")});
             this.cmbLowBatteryActions.Name = "cmbLowBatteryActions";
             // 
             // lblCrtBatteryAction
@@ -466,9 +490,9 @@
             // 
             // gbGps
             // 
+            resources.ApplyResources(this.gbGps, "gbGps");
             this.gbGps.Controls.Add(this.btnGpsOff);
             this.gbGps.Controls.Add(this.btnGpsOn);
-            resources.ApplyResources(this.gbGps, "gbGps");
             this.gbGps.Name = "gbGps";
             this.gbGps.TabStop = false;
             // 
@@ -488,19 +512,19 @@
             // 
             // tpInterface
             // 
+            resources.ApplyResources(this.tpInterface, "tpInterface");
             this.tpInterface.Controls.Add(this.gbSpeed);
             this.tpInterface.Controls.Add(this.cmbLanguage);
             this.tpInterface.Controls.Add(this.gbCoordinateSystem);
             this.tpInterface.Controls.Add(this.lblLanguage);
-            resources.ApplyResources(this.tpInterface, "tpInterface");
             this.tpInterface.Name = "tpInterface";
             this.tpInterface.UseVisualStyleBackColor = true;
             // 
             // gbSpeed
             // 
+            resources.ApplyResources(this.gbSpeed, "gbSpeed");
             this.gbSpeed.Controls.Add(this.rbKm_h);
             this.gbSpeed.Controls.Add(this.rbM_S);
-            resources.ApplyResources(this.gbSpeed, "gbSpeed");
             this.gbSpeed.Name = "gbSpeed";
             this.gbSpeed.TabStop = false;
             // 
@@ -520,17 +544,17 @@
             // 
             // cmbLanguage
             // 
+            resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
             this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLanguage.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
             this.cmbLanguage.Name = "cmbLanguage";
             // 
             // gbCoordinateSystem
             // 
+            resources.ApplyResources(this.gbCoordinateSystem, "gbCoordinateSystem");
             this.gbCoordinateSystem.Controls.Add(this.rbWgs84Deg);
             this.gbCoordinateSystem.Controls.Add(this.rbSC_42);
             this.gbCoordinateSystem.Controls.Add(this.rbWGS_84);
-            resources.ApplyResources(this.gbCoordinateSystem, "gbCoordinateSystem");
             this.gbCoordinateSystem.Name = "gbCoordinateSystem";
             this.gbCoordinateSystem.TabStop = false;
             // 
@@ -700,12 +724,12 @@
             // 
             // IndicatorBox
             // 
+            resources.ApplyResources(this.IndicatorBox, "IndicatorBox");
             this.IndicatorBox.Controls.Add(this.cbGroundLevel);
             this.IndicatorBox.Controls.Add(this.cbCompass);
             this.IndicatorBox.Controls.Add(this.cbRollScale);
             this.IndicatorBox.Controls.Add(this.cbPitchScale);
             this.IndicatorBox.Controls.Add(this.cbCrossMark);
-            resources.ApplyResources(this.IndicatorBox, "IndicatorBox");
             this.IndicatorBox.Name = "IndicatorBox";
             this.IndicatorBox.TabStop = false;
             // 
@@ -746,6 +770,7 @@
             // 
             // UavParamBox
             // 
+            resources.ApplyResources(this.UavParamBox, "UavParamBox");
             this.UavParamBox.Controls.Add(this.cbLatitude);
             this.UavParamBox.Controls.Add(this.cbFlightTime);
             this.UavParamBox.Controls.Add(this.cbFlightPath);
@@ -756,7 +781,6 @@
             this.UavParamBox.Controls.Add(this.cbHomeDistance);
             this.UavParamBox.Controls.Add(this.cbRollAngle);
             this.UavParamBox.Controls.Add(this.cbPitchAngle);
-            resources.ApplyResources(this.UavParamBox, "UavParamBox");
             this.UavParamBox.Name = "UavParamBox";
             this.UavParamBox.TabStop = false;
             // 
@@ -832,11 +856,11 @@
             // 
             // BatteryBox
             // 
+            resources.ApplyResources(this.BatteryBox, "BatteryBox");
             this.BatteryBox.Controls.Add(this.cbBatteryVoltage);
             this.BatteryBox.Controls.Add(this.cbBatteryLevel);
             this.BatteryBox.Controls.Add(this.cbBatteryCapacity);
             this.BatteryBox.Controls.Add(this.cbBatteryTimeLeft);
-            resources.ApplyResources(this.BatteryBox, "BatteryBox");
             this.BatteryBox.Name = "BatteryBox";
             this.BatteryBox.TabStop = false;
             // 
@@ -870,11 +894,11 @@
             // 
             // TargetBox
             // 
+            resources.ApplyResources(this.TargetBox, "TargetBox");
             this.TargetBox.Controls.Add(this.cbTarLon);
             this.TargetBox.Controls.Add(this.cbTarLat);
             this.TargetBox.Controls.Add(this.cbTargetHeight);
             this.TargetBox.Controls.Add(this.cbTargetWidth);
-            resources.ApplyResources(this.TargetBox, "TargetBox");
             this.TargetBox.Name = "TargetBox";
             this.TargetBox.TabStop = false;
             // 
@@ -908,6 +932,7 @@
             // 
             // OtherParamBox
             // 
+            resources.ApplyResources(this.OtherParamBox, "OtherParamBox");
             this.OtherParamBox.Controls.Add(this.cbWeaponStatus);
             this.OtherParamBox.Controls.Add(this.cbWindSpeed);
             this.OtherParamBox.Controls.Add(this.cbWindAngle);
@@ -921,7 +946,6 @@
             this.OtherParamBox.Controls.Add(this.cbVerticalSpeed);
             this.OtherParamBox.Controls.Add(this.cbAltitudeWrtGround);
             this.OtherParamBox.Controls.Add(this.cbHorizontalSpeed);
-            resources.ApplyResources(this.OtherParamBox, "OtherParamBox");
             this.OtherParamBox.Name = "OtherParamBox";
             this.OtherParamBox.TabStop = false;
             // 
@@ -1060,8 +1084,8 @@
             // 
             // panelButtons
             // 
-            this.panelButtons.Controls.Add(this.tlpBottom);
             resources.ApplyResources(this.panelButtons, "panelButtons");
+            this.panelButtons.Controls.Add(this.tlpBottom);
             this.panelButtons.Name = "panelButtons";
             // 
             // tlpBottom
@@ -1251,5 +1275,7 @@
         private System.Windows.Forms.GroupBox gbGpsFailtureActions;
         private System.Windows.Forms.RadioButton rbAutoManeuvering;
         private System.Windows.Forms.RadioButton rbLanding;
+        private System.Windows.Forms.Label lblHomeReturnAltitude;
+        private Controls.TextBoxes.IntTextBox tbHomeReturnAltitude;
     }
 }

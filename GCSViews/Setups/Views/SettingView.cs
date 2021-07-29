@@ -45,7 +45,6 @@ namespace MissionPlanner.GCSViews.Setups.Views
             tabControl.TabPages.RemoveAt( 2 );
 
             LanguagesCmbFilling( );
-            CommandsCmbFilling( );
         }
 
         #endregion
@@ -65,12 +64,12 @@ namespace MissionPlanner.GCSViews.Setups.Views
             _selectLanguageIndex = cmbLanguage.SelectedIndex;
         }
 
-        private int ConvertHomeReturnSpeedToMerest ( int hrs )
+        private double ConvertHomeReturnSpeedToMerest ( double hrs )
         {
             return hrs / 100;
         }
 
-        private int ConvertHomeReturnSpeedToSantimeters ( int hrs )
+        private double ConvertHomeReturnSpeedToSantimeters ( double hrs )
         {
             return hrs * 100;
         }
@@ -81,17 +80,6 @@ namespace MissionPlanner.GCSViews.Setups.Views
             Land = 1,
             ReturnToLaunch = 2
         }
-
-        private void CommandsCmbFilling ( )
-        {
-            cmbLowBatteryActions.DataSource = Enum.GetValues( typeof( Actions ) );
-            cmbCrtBatteryActions.DataSource = Enum.GetValues( typeof( Actions ) );
-            /*var resourceManager = new ResourceManager( GetType( ).FullName, Assembly.GetExecutingAssembly( ) );
-            var None = resourceManager.GetString( "NoneText", CultureInfo.CurrentUICulture );
-            var Land = resourceManager.GetString( "LandText", CultureInfo.CurrentUICulture );
-            var Rtl = resourceManager.GetString( "RtlText", CultureInfo.CurrentUICulture );*/
-        }
-
 
         private void CheckedGroupIndicatorsGetState ( CheckBox group, int state, int countItems )
         {
@@ -188,7 +176,8 @@ namespace MissionPlanner.GCSViews.Setups.Views
                 {
                     UseAlternateAirfieldStartPlace = cbUseAlternateAirfieldStartPlace.Checked,
                     CheckAlternateAirfields = cbCheckAlternateAirfields.Checked,
-                    HomeReturnSpeed = int.Parse( tbHomeReturnSpeed.Text ),
+                    HomeReturnSpeed = double.Parse( tbHomeReturnSpeed.Text ),
+                    HomeReturnAltitude = double.Parse( tbHomeReturnAltitude.Text ),
                     AutoMode = CreateAutoMode( ),
                     LowBatteryActions = CreateLowBatteryActions( ),
                     EIkrlFailtureActions = CreateEIkrlFailtureActions( ),
@@ -366,8 +355,10 @@ namespace MissionPlanner.GCSViews.Setups.Views
                     btnGpsOn.Hide( );
                 }
 
+                bgAlternateAerodromesPresence.Show( );
                 lblHomeReturnSpeed.Show( );
                 tbHomeReturnSpeed.Show( );
+                tbHomeReturnAltitude.Show( );
                 gbCrossHairType.Show( );
                 cbUseAlternateAirfieldStartPlace.Show( );
                 gbLowBatteryActions.Show( );
@@ -456,21 +447,24 @@ namespace MissionPlanner.GCSViews.Setups.Views
 
             void LoadUavParams ( )
             {
-                var findedValues = MainV2.ComPort.MAV.param.Where( p => p.Name == "RC16_MAX" || p.Name == "RC16_TRIM" || p.Name == "FS_GCS_ENABLE" || p.Name == "BATT_FS_CRT_ACT" || p.Name == "BATT_FS_LOW_ACT" || p.Name == "RALLY_INCL_HOME" || p.Name == "RTL_SPEED" || p.Name == "FS_EKF_THRESH" || p.Name == "CIRCLE_RADIUS" );
-                var rallyIncl = (int) findedValues.Where( p => p.Name == "RALLY_INCL_HOME" ).First( ).Value;
-                var homeReturnSpeed = (int) findedValues.Where( p => p.Name == "RTL_SPEED" ).First( ).Value;
-                var begPart = findedValues.Where( p => p.Name == "RC16_MAX" ).First( ).Value;
-                var endPart = findedValues.Where( p => p.Name == "RC16_TRIM" ).First( ).Value;
-                var gpsFailtureAction = (int) findedValues.Where( p => p.Name == "FS_GCS_ENABLE" ).First( ).Value;
-                var crtBat = (int) findedValues.Where( p => p.Name == "BATT_FS_CRT_ACT" ).First( ).Value;
-                var lowBat = (int) findedValues.Where( p => p.Name == "BATT_FS_LOW_ACT" ).First( ).Value;
+                var findedValues = MainV2.ComPort.MAV.param.Where( p => p.Name == "RC16_MAX" || p.Name == "RC16_TRIM" || p.Name == "FS_GCS_ENABLE" || p.Name == "BATT_FS_CRT_ACT" || p.Name == "BATT_FS_LOW_ACT" || p.Name == "RALLY_INCL_HOME" || p.Name == "RTL_SPEED" || p.Name == "FS_EKF_THRESH" || p.Name == "CIRCLE_RADIUS" || p.Name == "RTL_ALT" );
+                var rallyIncl = ( int ) GetParam( findedValues, "RALLY_INCL_HOME" );
+                var homeReturnSpeed = ( int ) GetParam( findedValues, "RTL_SPEED" );
+
+                var homeReturnAlt = GetParam( findedValues, "RTL_ALT" );
+                var begPart = GetParam( findedValues, "RC16_MAX" );
+                var endPart = GetParam( findedValues, "RC16_TRIM" );
+                var gpsFailtureAction = ( int ) GetParam( findedValues, "FS_GCS_ENABLE" );
+                var crtBat = ( int ) GetParam( findedValues, "BATT_FS_CRT_ACT" );
+                var lowBat = ( int ) GetParam( findedValues, "BATT_FS_LOW_ACT" );
                 //var percentVoltLanding = CalcPercentOfVolt( mavPercentVoltLanding );
                 //var percentVoltReturn = CalcPercentOfVolt( mavPercentVoltReturn );
-                var gpsFailtureActionValue = findedValues.Where( p => p.Name == "FS_EKF_THRESH" ).First( ).Value;
-                var circleRadius = findedValues.Where( p => p.Name == "CIRCLE_RADIUS" ).First( ).Value;
+                var gpsFailtureActionValue = Math.Round( GetParam( findedValues, "FS_EKF_THRESH" ), 2 );
+                var circleRadius = GetParam( findedValues, "CIRCLE_RADIUS" );
 
                 cbUseAlternateAirfieldStartPlace.Checked = rallyIncl == 1;
                 tbHomeReturnSpeed.Text = ConvertHomeReturnSpeedToMerest( homeReturnSpeed ).ToString();
+                tbHomeReturnAltitude.Text = ConvertHomeReturnSpeedToMerest( homeReturnAlt ).ToString( );
                 tbIdUav.Text = settings.General.AutoMode.UavId;
                 cmbLowBatteryActions.SelectedIndex = lowBat;
                 cmbCrtBatteryActions.SelectedIndex = crtBat;
@@ -478,22 +472,29 @@ namespace MissionPlanner.GCSViews.Setups.Views
 
                 switch ( gpsFailtureAction )
                 {
-                    case 5:
-                        rbIkrlAutoLanding.Checked = true;
-                        break;
                     case 1:
                         rbIkrlTakeoffPoint.Checked = true;
+                        break;
+                    case 5:
+                        rbIkrlAutoLanding.Checked = true;
                         break;
                 }
 
                 switch ( gpsFailtureActionValue )
                 {
-                    case 0:
+                    case 1.0:
                         rbLanding.Checked = true;
                         break;
                     case 0.8:
                         rbAutoManeuvering.Checked = true;
                         break;
+                }
+
+                double GetParam ( IEnumerable<MAVLink.MAVLinkParam> mavParams, string paramName )
+                {
+                    var findParams = findedValues.Where( p => p.Name == paramName );
+
+                    return findParams.Count( ) > 0 ? findParams.First( ).Value : 0;
                 }
 
                 int CalcPercentOfVolt ( double voltage )
@@ -538,7 +539,8 @@ namespace MissionPlanner.GCSViews.Setups.Views
                 {
                     var useStartPlace = Configurator.Setting.General.UseAlternateAirfieldStartPlace ? 1 : 0;
                     var homeReturnSpeed = ConvertHomeReturnSpeedToSantimeters( Configurator.Setting.General.HomeReturnSpeed );
-                    
+                    var homeReturnAlt = double.Parse( tbHomeReturnAltitude.Text ) * 100;
+
                     float begPart = 0;
                     float endPart = 0;
 
@@ -557,6 +559,7 @@ namespace MissionPlanner.GCSViews.Setups.Views
                     }
 
                     var gpsFailtureActionn = rbLanding.Checked ? 0 : 0.8;
+                    var ikrlFailtureAction = rbIkrlAutoLanding.Checked ? 5 : 1;
                     var circleRadius = int.Parse( tbPatrolRadius.Text ) * 100;
 
                     MainV2.ComPort.setParam( "RALLY_INCL_HOME", useStartPlace );
@@ -565,9 +568,10 @@ namespace MissionPlanner.GCSViews.Setups.Views
                     MainV2.ComPort.setParam( "RC16_TRIM", endPart );
                     MainV2.instance.UpdateAutoMode( Configurator.Setting.General.AutoMode );
                     MainV2.ComPort.setParam( "RTL_SPEED", homeReturnSpeed );
+                    MainV2.ComPort.setParam( "RTL_ALT", homeReturnAlt );
                     MainV2.ComPort.setParam( "BATT_FS_CRT_ACT", Configurator.Setting.General.LowBatteryActions.crtBatteryAction );
                     MainV2.ComPort.setParam( "BATT_FS_LOW_ACT", Configurator.Setting.General.LowBatteryActions.lowBatteryAction );
-                    MainV2.ComPort.setParam( "FS_GCS_ENABLE", ( int ) Configurator.Setting.General.EIkrlFailtureActions );
+                    MainV2.ComPort.setParam( "FS_GCS_ENABLE", ikrlFailtureAction );
                     MainV2.ComPort.setParam( "CIRCLE_RADIUS", circleRadius );
                 }
 

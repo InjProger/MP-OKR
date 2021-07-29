@@ -1309,9 +1309,6 @@
     <EmbeddedResource Include="GCSViews\Setups\Views\SettingView.resx">
       <DependentUpon>SettingView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Setups\Views\SettingView.ru-BY.resx">
-      <DependentUpon>SettingView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Setups\Views\SettingView.ru.resx">
       <DependentUpon>SettingView.cs</DependentUpon>
     </EmbeddedResource>
@@ -2066,9 +2063,6 @@
     <EmbeddedResource Include="MainV2.pt.resx">
       <DependentUpon>MainV2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.ru-BY.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainV2.ru-KZ.resx">
       <DependentUpon>MainV2.cs</DependentUpon>
     </EmbeddedResource>
@@ -2373,6 +2367,9 @@
       <DependentUpon>SerialOutputPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.ru.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Swarm\Sequence\LayoutEditor.resx" />

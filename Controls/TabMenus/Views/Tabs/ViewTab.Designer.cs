@@ -44,8 +44,8 @@
             // 
             // panelSplit1
             // 
-            this.panelSplit1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             resources.ApplyResources(this.panelSplit1, "panelSplit1");
+            this.panelSplit1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelSplit1.Name = "panelSplit1";
             // 
             // btnUAV
@@ -68,6 +68,7 @@
             // 
             // ViewTab
             // 
+            resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnStartPlace);
             this.Controls.Add(this.btnLoadMap);
@@ -75,7 +76,6 @@
             this.Controls.Add(this.btnUAV);
             this.Controls.Add(this.panelSplit1);
             this.Name = "ViewTab";
-            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
 
         }

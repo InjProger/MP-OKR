@@ -179,7 +179,7 @@
 </value>
   </data>
   <data name="btnEdit.Text" xml:space="preserve">
-    <value>&amp;Изменить</value>
+    <value>&amp;Редакт.</value>
   </data>
   <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>

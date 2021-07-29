@@ -82,6 +82,7 @@ namespace MissionPlanner.Globals
                 {
                     var parameters = upScreen.Parameters;
 
+                    StreamWorker.Visible( EParam.ARMING_STATUS, parameters.Arming );
                     StreamWorker.Visible( EParam.DRONE_NAME, parameters.UavId );
                     StreamWorker.Visible( EParam.SATELLITES, parameters.Satellites );
                     StreamWorker.Visible( EParam.SIGNAL_LEVEL, parameters.SignalLevel );

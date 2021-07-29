@@ -47,10 +47,10 @@
             // 
             // BlackBoxTab
             // 
+            resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnDownload);
-            resources.ApplyResources(this, "$this");
             this.Name = "BlackBoxTab";
             this.ResumeLayout(false);
 

@@ -8,7 +8,8 @@ namespace MissionPlanner.GCSViews.Setups.Models.Generals
     {
         public bool UseAlternateAirfieldStartPlace { get; set; }
         public bool CheckAlternateAirfields { get; set; }
-        public int HomeReturnSpeed { get; set; }
+        public double HomeReturnSpeed { get; set; }
+        public double HomeReturnAltitude { get; set; }
         public AutoMode AutoMode { get; set; }
         public LowBatteryActions LowBatteryActions { get; set; }
 

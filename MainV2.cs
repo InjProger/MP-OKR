@@ -1154,7 +1154,7 @@ namespace MissionPlanner
                 Local = measure.Local,
                 Voltage = measure.Voltage,
                 Capacity = measure.Capacity,
-                Speed = speed == ESpeed.M_s ? measure.Distance[ 0 ] : measure.Distance[ 1 ],
+                Speed = speed == ESpeed.M_s ? measure.Speed[ 0 ] : measure.Speed[ 1 ],
                 Distance = speed == ESpeed.M_s ? measure.Distance[ 0 ] : measure.Distance[ 1 ],
                 CardinalPoints = measure.CardinalPoints,
                 FlightMode = measure.FlightMode,
@@ -1858,7 +1858,6 @@ namespace MissionPlanner
                     catch ( Exception ex ) 
                     { 
                         log.Warn( ex );
-                        IsConnected = false;
                     }
                 }
 
@@ -4087,14 +4086,21 @@ namespace MissionPlanner
 
         private ECameras GetCurrentCamera ( )
         {
-            switch ( MainV2.Joystick.State.ViewPoints[ 7 ] )
+            try
             {
-                case -32768: // УЗ
-                    return ECameras.Aiming;
-                case 0: // ИК
-                    return ECameras.Infrared;
-                default: // ШЗ
-                    return ECameras.Wide;
+                switch ( MainV2.Joystick.State.ViewPoints[ 7 ] )
+                {
+                    case -32768: // УЗ
+                        return ECameras.Aiming;
+                    case 0: // ИК
+                        return ECameras.Infrared;
+                    default: // ШЗ
+                        return ECameras.Wide;
+                }
+            }
+            catch 
+            {
+                return ECameras.Wide;
             }
         }
 
@@ -5230,7 +5236,7 @@ namespace MissionPlanner
                 streamWorker.Update( EParam.BATTERY_CAPACITY, FlightPlanner.Instance.lblSpentBattery.Text.Replace( ',', '.' ) + _measure.Capacity );
                 streamWorker.Update( EParam.BATTERY_TIME_LEFT, FlightPlanner.Instance.lblRemainingTime.Text.Replace( ',', '.' ) );
                 streamWorker.Update( EParam.FLIGHT_PATH, cs.distTraveled.ToString( "0" ) + _measure.Distance );
-                streamWorker.Update( EParam.FLIGHT_TIME, cs.timeInAir.ToString( "0" ) );
+                streamWorker.Update( EParam.FLIGHT_TIME, ( cs.timeInAir / 60 ).ToString( "0" ) + "." + ( cs.timeInAir % 60 ).ToString( "0" ) );
                 // streamWorker.Update( EParam.TARGET_WIDTH, .ToString( "0.#" );
                 // streamWorker.Update( EParam.TARGET_HEIGHT, .ToString( "0.#" );
                 streamWorker.Update( EParam.FLIGHT_STATUS, FlightStatus( cs.mode ) );
@@ -5292,11 +5298,11 @@ namespace MissionPlanner
                 {
                     if ( Configurator.Setting.Interface.ESpeed == ESpeed.Km_h )
                     {
-                        return SpeedConverter.ToKilometersPerHours( speed ).ToString( "0" ) + _measure.Speed;
+                        return SpeedConverter.ToKilometersPerHours( speed ).ToString( "0" );
                     }
                     else
                     {
-                        return speed.ToString( "0" ) + _measure.Speed;
+                        return speed.ToString( "0" );
                     }
                 }
 
@@ -5460,25 +5466,21 @@ namespace MissionPlanner
         private Color getEkfStatus ( ) 
         {
             var status = MainV2.ComPort.MAV.cs.ekfstatus;
-            Color color = new Color( );
-            switch ( status ) 
+
+            switch ( status )
             {
                 case 0:
-                    color = Color.White;
-                    break;
+                    return Color.White;
                 case 1:
-                    color = Color.Red;
-                    break;
+                    return Color.Red;
+                default:
+                    return Color.White;
             }
-            return color;
         }
 
         private void lblGpsStatus_Click ( object sender, EventArgs e )
         {
-            if ( MainV2.ComPort.MAV.cs.gpsstatus < 2 )
-            {
-                MainV2.Joystick.Gps = 1000;
-            }
+            MainV2.Joystick.Gps = ( short ) ( MainV2.ComPort.MAV.cs.gpsstatus < 2 ? 1000 : 2000 );
         }
 
         private Color getTelemLvl () 
@@ -5500,7 +5502,8 @@ namespace MissionPlanner
             lblRSSI.ForeColor = getTelemLvl( );
             lblEkfStatus.ForeColor = getEkfStatus();
             FlightPlanner.MainMap.Overlays[ 4 ].Markers.Clear( );
-            
+            FlightPlanner.routesoverlay.Markers.Clear( );
+
             var gimble = GlbContext.Uav.Device.Gimble;
             var gimbleAngle = Configurator.Setting.General.AutoMode.GimbleAngle * Math.PI / 180;
             var pitch = _gimbleAngle = gimble is null ? gimbleAngle : GetGimblePitch( );
@@ -5513,6 +5516,8 @@ namespace MissionPlanner
             _targetPoint = new PointLatLng( targetLat, targetLon );
 
             var targetMarker = new GMarkerGoogle( _targetPoint, GMarkerGoogleType.target );
+            var marker = Common.getMAVMarker( MainV2.ComPort.MAV );
+            FlightPlanner.routesoverlay.Markers.Add( marker );
 
             FlightPlanner.MainMap.Overlays[ 4 ].Markers.Add( targetMarker );
         }
