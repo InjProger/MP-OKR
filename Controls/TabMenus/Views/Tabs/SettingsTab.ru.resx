@@ -836,6 +836,6 @@
 </value>
   </data>
   <data name="btnBattery.Text" xml:space="preserve">
-    <value>&amp;АКБ</value>
+    <value>&amp;Батарея</value>
   </data>
 </root>

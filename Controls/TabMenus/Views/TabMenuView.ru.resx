@@ -228,13 +228,13 @@
     <value>902, 88</value>
   </data>
   <data name="btnBlackBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 2</value>
+    <value>416, 3</value>
   </data>
   <data name="btnBlackBox.Text" xml:space="preserve">
     <value>БУP</value>
   </data>
   <data name="btnSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 2</value>
+    <value>302, 3</value>
   </data>
   <data name="btnSettings.Text" xml:space="preserve">
     <value>Настройки</value>
@@ -243,13 +243,13 @@
     <value>183, 3</value>
   </data>
   <data name="btnAirfields.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 50</value>
+    <value>113, 50</value>
   </data>
   <data name="btnAirfields.Text" xml:space="preserve">
-    <value>ЗПП</value>
+    <value>Аэродромы</value>
   </data>
   <data name="btnView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 2</value>
+    <value>97, 3</value>
   </data>
   <data name="btnView.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 51</value>
@@ -267,7 +267,7 @@
     <value>914, 136</value>
   </data>
   <data name="btnMapEditing.Text" xml:space="preserve">
-    <value>Редактировать</value>
+    <value>Правка карты</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">

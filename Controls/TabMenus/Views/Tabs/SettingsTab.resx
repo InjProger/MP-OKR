@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnBattery.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAlignment.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -127,15 +131,17 @@
   <data name="btnAccelerometer.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnAlignment.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="btnCompass.Text" xml:space="preserve">
+    <value>&amp;Compass</value>
   </data>
-  <data name="btnESC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 80</value>
+  <data name="btnCompass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="&gt;&gt;btnSetups.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="btnConfig.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;btnSetups.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -143,11 +149,11 @@
   <data name="btnCompass.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 80</value>
   </data>
-  <data name="&gt;&gt;btnBattery.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="btnBattery.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
+  </data>
+  <data name="&gt;&gt;btnESC.Name" xml:space="preserve">
+    <value>btnESC</value>
   </data>
   <data name="btnConfig.Location" type="System.Drawing.Point, System.Drawing">
     <value>639, 3</value>
@@ -248,17 +254,20 @@
   <data name="&gt;&gt;btnESC.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SettingsTab</value>
+  <data name="&gt;&gt;btnBattery.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnESC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 80</value>
   </data>
   <data name="&gt;&gt;btnControl.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnESC.Name" xml:space="preserve">
-    <value>btnESC</value>
-  </data>
   <data name="btnCompass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="btnBattery.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
   </data>
   <data name="btnCompass.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -275,26 +284,17 @@
   <data name="btnControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 3</value>
   </data>
-  <data name="&gt;&gt;panelSplit2.Name" xml:space="preserve">
-    <value>panelSplit2</value>
-  </data>
   <data name="btnBattery.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 80</value>
   </data>
   <data name="panelSplit2.Size" type="System.Drawing.Size, System.Drawing">
     <value>4, 80</value>
   </data>
-  <data name="&gt;&gt;btnControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="btnAlignment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnBattery.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnCompass.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
+  <data name="btnConfig.Text" xml:space="preserve">
+    <value>&amp;Config</value>
   </data>
   <data name="panelSplit1.Size" type="System.Drawing.Size, System.Drawing">
     <value>4, 80</value>
@@ -397,6 +397,9 @@
   <data name="&gt;&gt;btnAlignment.Name" xml:space="preserve">
     <value>btnAlignment</value>
   </data>
+  <data name="&gt;&gt;panelSplit2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="&gt;&gt;btnSetups.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -419,14 +422,11 @@
   <data name="btnAlignment.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 80</value>
   </data>
-  <data name="btnAccelerometer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 80</value>
+  <data name="&gt;&gt;panelSplit1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="btnConfig.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;panelSplit1.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="btnESC.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -443,14 +443,20 @@
   <data name="btnSetups.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="btnESC.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
+  <data name="btnSetups.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="btnAccelerometer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 80</value>
+  </data>
+  <data name="&gt;&gt;btnBattery.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="btnAccelerometer.Text" xml:space="preserve">
     <value>&amp;Accelerom</value>
   </data>
-  <data name="btnControl.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
+  <data name="btnConfig.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
   </data>
   <data name="&gt;&gt;btnAccelerometer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -458,8 +464,8 @@
   <data name="&gt;&gt;btnAlignment.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnCompass.Text" xml:space="preserve">
-    <value>&amp;Compass</value>
+  <data name="&gt;&gt;panelSplit1.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;btnAlignment.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -479,11 +485,11 @@
   <data name="&gt;&gt;btnControl.Name" xml:space="preserve">
     <value>btnControl</value>
   </data>
-  <data name="&gt;&gt;panelSplit1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="&gt;&gt;btnCompass.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelSplit2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="panelSplit2.Location" type="System.Drawing.Point, System.Drawing">
     <value>629, 3</value>
@@ -491,17 +497,17 @@
   <data name="&gt;&gt;btnConfig.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelSplit2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnESC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="btnConfig.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;btnSetups.Name" xml:space="preserve">
     <value>btnSetups</value>
   </data>
-  <data name="btnConfig.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="btnBattery.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
+  <data name="&gt;&gt;btnConfig.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnControl.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -512,6 +518,9 @@
   <data name="btnAccelerometer.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
+  <data name="btnESC.Text" xml:space="preserve">
+    <value>&amp;ESC</value>
+  </data>
   <data name="btnSetups.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -521,8 +530,8 @@
   <data name="btnAccelerometer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnSetups.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
+  <data name="btnESC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 3</value>
   </data>
   <data name="btnESC.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -610,109 +619,11 @@
         UqlSpT/hnUgHBwfuGOT/lxsIj5PQ7M0FAJvHw8cSdqeWF/4ZwGbzH5r3WXDdbbUsAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;btnBattery.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="btnAlignment.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="&gt;&gt;btnAlignment.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="btnConfig.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;btnCompass.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btnAccelerometer.Name" xml:space="preserve">
-    <value>btnAccelerometer</value>
-  </data>
-  <data name="btnControl.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAABKwSURBVGhD1VlnUJxXln21nt2p
-        sn9N1e6sE5bIsaEJTc5ZIIHImRY5IwmEoMk5NdBA0+QochQ5IySULGvGGtu7Hodx2fNja8reHWt2gsfr
-        sGfv+5BkWWampmr2Dz9uqXnd33v33HDueZ8YgGNtRy4eJzty8TjZkYvHyY5cPE525OJxsiMXj5OxldX1
-        J7a2vsnGp2ZYd28/m5yeY7XyZp3S8uo4b19/laW13aKZpeWanaPrZESUtKyhUeHa2q56YW5hmfUNDbOr
-        S8tsdn6JLVxdYffu3WfTs/PM2tb5ufjE1H8cHh1n45MzbI6+53Z1aZUNDl9h8wtLTNnV83xjQ7NzVExc
-        ia2z65ipxGZNYm2/6OXj21lUWp5YUyfXHR2fZoMjo8IzA8/YDwBMTM/yHz7X1NLu5+xxatvQ2OKhgakN
-        zG1cIbFzh4mlI/SNzb8Um1v/Kik1o/bK6KTa6MTU9wBcu3addXR2+zg6e+ZERkkvqbp67GfnF78HYIIC
-        NTI6/kpyZna12ML6Q32R5M/GtLc5nWFm6wZDM0voi8x/5+zmvUPB8h+bnH5uiED8VQCbWzs8Ay8GhUaM
-        vnhC6xsbV39kXJajqm0C8u5FNPcuo75zFgU1fQiVXoCGrjlE5lYfVDc0RK6srWnOLSzpLC6vqTfIW/zT
-        M85/OT0zj76BQSSnZn4yNDJmv7i4qk4AdFZWNzXr5U3hxuaS907omyAk9jxktGe9ag5NPUtopLMqFRPI
-        pLPt3QLx0ms6/xseGT0+MDTyMs9m/9DIdwBuHNwW7Nbtu2xmfkHN3dv3QE3bGFkFDVCN7aB7/DpUI7to
-        G9pEK1nb8BY6RvfQM3mAhq6r8Dgbi1fUNb81tbD+3NzK8aGJufVvdY1M/6QnMoelnRMktk7QIif1jMz+
-        QFn7raml/UOxxOrzV9S1v/X0j6E95tAzRWdc2YNyZAed4/vC/u30uYvO7hy9hiyZAid1TGDv7HKbsnDy
-        xs3bbP/GTcHYzVt3yfnX2d3X7z/v6x+wo65rhqrmcfRP3UTbwDoUvato7V9H+/A2gdhCS//aE+sY3SWA
-        +4iMz8FPfvoqRSscMSn1iEyoEixMWoawc+WISqxGRHwlfdcAJ89I/OTFFxEWly0Ep4scb+lbgXJwC+39
-        myipHECDYk4A1NxPZw9soG/6NmoVU9DUN8Op02f27967/8KtO68zbmx9a5vtH9xkly4XlP2rmgZK6gfQ
-        S9Ft6VuDgkxwniJf1zGLhs45AchjAM19dMDgJronb+B0SCJ0RdbIK5tBZfMOShrWUfrI+Ge+ll8xCz0T
-        W/gExaJ74hoFZEMIkJL2aFIt4Wx0CmylYXAIDUNuSTs6ruwcnkXncJ8qGq/gpRPauJiTV33j9h22tXuN
-        sdt37rGllTUdXZH4N2FxFymdB4T8cZTXhZKJTS+GjUc4bL3CkV3Y8t3Gj6zjyi71xxI5ZwlnbykFYQ35
-        lXPfs9L6Vbj7xEHHSAJ55yI6qCxbKMItlGUVlYk0pRgOslgk3OtG0FwlHMNCIe+4SgHaEM5opmD2UqAi
-        EvKgZ2z26fj0rMEy9S174403WX5haam2kSU16tKTB7gpaHN5zyJcTsUiKq0XAdJGil4ilc73AXCgXZPX
-        EZsmg7q+GOdlVyCrvvrEef75YtEVaOibIzrpMnqodLjj/FkeIF7nwTFZ8BsoROrPB5Byvw920hBUNIwK
-        fcH94L/lvjVRoHTE1kjLvli1ur7FWGOT4nkPX78tzwApOseuHTpED/AHVVTjbYMr8PRLQGLOOMJTVDgT
-        liY0Ha9/5ch35aSkLFQ0j0HLUEx1X0ZZWCXnZ4Wy4Z8j4qsEcGVNo0LGuDOK4U0UKSfQMLiKvGIllU8w
-        gmcq4FaTAr/YFDSTH0WKSdQRM7U/OqtzbB+nAuPgfebsbkdnzwtMVlR20tza4aP47HJiHUorPcQRZ1Gp
-        RCXlUTPmwM49HAm544hM7YKNawCkFOmoxEsoqOoS+oNvrCCH2qiWrR294EalclhGBICspGENnqcTIbH3
-        gIKIQOgjOiMy7hKk1gEIdwjBxdI25JV2wDM4lsokF5UtUwgJT0Sy8xkEe4dA1jD0KKh7SMmphYmp1a9p
-        vmjQxL1qbCS2+f2lig6KIjENbV7cMABr5zD4RVXCN6IUIUkKJOZNEIgxBJ6rp7UyeAUXwtkrGo1EpY/Z
-        qZOYw903DBKHMyiqXSKA8yionKfPy7BxCoDrqWAoOUWSJeU3otoyEl8EdeBjryrEOYahvGsBXVQFvVO3
-        EJl4GaM+IfjmQgXejEhBqF8U5FSqqrE95Ff1wMDY8k+9A4Nitrq2a25kbP0/BTU9AgDOv5fK2+Dik47s
-        8h2kFa+SLSPh0iSBmEZGySrSi9aQIluG86l4VLdOPGGmTnLMyy+aJqkvDabFJwAKCYzE3o/AhQrl00bl
-        F54sw4ZTNhAzAoT1oNQmCpk13UIvKcevwe9sDD6OOw/k1QEXyhDv7o8y5Syx13XIagdgYGL51fTCggXb
-        3r6uayS2/OxCSavQnHxgVbWOw8Y9BA7eyXDwSsSpkALB+biLo3DzyyTHE2HrEQNv/3MCh3Mq5Y2sIudc
-        T4XAiqLNM5BPzvMmLq5bgZ1LGM2AACFAvF8uVnUi1cof73gUY8MmA+GnY9A4sIrmtmmoaL+U/AYUOXrj
-        o/iLGPEOQGhEMlqpD3gJ5ZarYGxm9XlPf68hu5ib/6qNvcu7Ecn5UI3TUKFIchDlzSO4UNiMrPw62LmF
-        IC5nAhHUxM5ewbRBK84Xy1HbMUXTmcqHeJqXUTOBMbV2ImCpj5qYsxBv4jX4BqSTjnIiqbBCfbMl1HOq
-        rBHB5HhIGP1ePozo5AJIYjKIQpNQQlGOv1CFUJrWIbRW1zkvPMcp9xzRusTW4f2ExBQ11jMwckJsaf2R
-        sw+llzcxAeDGD+iiKds+RA14hljo8ixRaQ/OhmegZ/YWgb0mRKR54PD3fGNZbS9O6IoQm1yP4tpHLCRk
-        YBnn0hqhTnIgv7qH6viQ7ZRUSnJios7pA6RfrIJ2TgUs734Co/FNOIQl02ReRyOXL5Qx7jwfnJwp3c9E
-        w9DE7D9alZ1aJGlXTbQNRH9U1zNCFQkoXs/8h8KQoUP4gHI5FU0NXQ+vIBn8iEaVVGpN9L3gPJmCxj2v
-        7dPBcdA2tCLqpNqvXnyUgTn6vCD0gp7IRqBAXkKKwUdzgBzror8DY7NgPLYJx3f+C/ZvfwajuCxU1g/R
-        wDucA9wn7ls1lZiWvik0tA2/vjIxZcMamhS+2gYWOKFpREMqTkDIKZFvzq2dBs3FkjZhgPmHpqC0cUgY
-        Po+/51Ob/145soXAiFS8clILQdH5KCP5UEylU0ylVNa4TmVQgJdPalMGU4U9nz6Dz5ssokbd1AJY7LwF
-        w85JuEUkQdGzTM4f/oaD4BVxJjQRJ7WMoKljCnmLIpwVyErSDExdEBxdgJfU9ZB0vlKQE09PZI68nRxU
-        0r/PCjr+O97E3JTkWIg0E69o6CM0pgjxac2IS29BuLQEr9LeQVGUPdqDO8OzxtWt8C/9raTPyVmVsD0r
-        hQ/RZk3L+JNA8TO4+k3NqcLLGjoUoAKIzNxIE13OZSmpGaUGZi7UNMvwOptCUdJB0oVqoqsbQlk8HuPP
-        Gl/nrNPcx+8Ic4LzStJIvHecvIN5Jr4xMJZ8ZiiSfKp2UudrR89AIUucIPgEb6US4s8pBnm/8XP4HKEA
-        0Z1DSUHi80hBPcDLrYd8ScupgZqGLjzOJKGIsiq29EJiUmotC4+KbuUcXVq3RrYqTNF/IVXqEyhFbdsU
-        DZZ9dBL38sY7TPthb3BwmZcb4OYbQw7HIjAqnYYa1/Y3iaHaoGUg/lLe1Ord2qZy1zE0/WM2MZpqfFeo
-        6dLGYXgHxtOsiaWgSanh+4T9uHzmUVfRmbxcOkkz1RD3nw6Jx0/V1OHqfY4CvUqstg5rpyDQJaebBYdE
-        9tu7hAtfFNcs0b8rlP5CYhMTnNQzJh0UgYTMEhpuKhJ2VJMUOR6V3NJ2mtahCE/qRGz2KFxOZ1ODp9Dh
-        OwLl6YisoOrqdeobGLbVNrKg5pskh/ZQRw45eEaQpqLpmz1G5FAHW7dQYfbwfZt6V5BXqUJ8Vgm8/CNJ
-        ABrjBF2wgqiHiuqXaSguo4QC7ewVA/+A4HnmHxg+5+RJEpgWZcQUssoFlDdskHocJcbIgIGZE17TNMDL
-        pMPPcylNg4SXim9gAkIT2pDBp3LBAkmDedjTPqXyASqTDRiZO4CulmGKto5AXbEV6ik7vTMHSM6phntA
-        LtKKFpFM1JxRRGIxMB8x1MD9s7fp3DbqIW2oaerD0JRmSkAqnXuFiGBTYDM+HHkGXH0T4O3jt8ac3Lz3
-        PPyIXaiuZJz+Koj2yHg2yohF+ETNyOsm6jIXDuFpbSfu9g6IQ1R6H5Lz50hmTCGZQLj4pJCE6KE77RKp
-        UgnaO7q9yVw0DUxRSZKjd/om4rLKcCaiHMkyeo6GYyo95xdVQQLuEgbm7tKQKoS6rikyc7uotJbpQrRB
-        82XlCSVzKyVx6E3BdXR2v8PsnNwf+AZl0+LqE+eftiICUko0aOsSQFfG01SrdG8lQXUuvQiOPmnkwBxp
-        o2UEx7eSjIimBlxHpqwZ2gZmD/kFf3FpQ03f2Pw/ky7WYGD2Lu3XSzIlErEXRui5JZInY7Bxi6ISVVKG
-        bsPewx9WjqR7yMmiWj5LuBw5lCSPjatb//BLMJPYvM1EppIPAyMuUwbWjgQgPEDZiaF77QktfbrqtQk0
-        y+WDH3G6vYcUbqfTBcldVNtPTb8LkYUrwqKkk1u7+8/dOLj7D7HnkkYNzByFO3YvNWhidilsXCLg6X+e
-        5Hko3fhk6Ju5hTxSxK9pGZKEr3xKivzQSiigwUTTphY2HzB9keknIdGFVC4bfxFAQfW8kE4b5wBoGJoJ
-        r0D6KVpcWJU0DlLTdRKXr6Kb/nb1iSKpa/4pTUnx0toW27t2wCZn5oz1Tcx/43IqlO4MaxicviUwHJfw
-        vLkHZ++QhB+EFjW7taMfnXWVbnHfj/rTxjMQHlcOkYnkEwJg9gjAX86AjGQx1/R2rkE0sXX+oEsHBUZl
-        kPPDaOheJLuK9Hw5jC1doGNg8llbe1fA7v4Bm1tcY1vb19j1g9usua3NT8fQ6FMjiRPScuuIjebQ2LeE
-        8tYxGqJZ0DWWkFbS/70AoIYD4A37Q+e58Sbmtz6RmACILaw/CIjI+6sAuCyITW6g5jL6qr1ddTouIfmS
-        kVjysY6+6VeGZtZ0uDk09Ix/53c2dKmqqt5mamaBbWztsvmlQwDbe/tsbHKaVdc1WJ0NDlvQ1DN8qCsy
-        h6GZLTQNxF+LxBafJCSn5Xf39nto6hl/ERFfIZz5rOOPjb/pCKKgm5pbfsg8vH13XH2TqAeo26lZngVQ
-        WHUVhSTMuNyIksZP7127zsora1lKRvaJSwWFZ6OkcekJKRlxtY3Nlh2qvh9T9NnI6OQPAPC3aB1dvay3
-        f/ifausbJcnpmdLoc4kZWTl5AckZ2Sdr6uRsb/8GS0hOHdAxsqezZ1FImfghgPlDFiJ57uBELJSYklqv
-        b+pM7LAoOPssAI42nCLyqqbuF3MLy5b/9u4HjL9sjYlLZPLWNpZzWcaKyqpYd/8Qkze1M0Wr6i8CaFd1
-        szZll/DyuLSyhuXmF7OqejmLpr34O9l3f/k+W15dN1bX1f9vHuGyxg1cJiBPAyggH0vqVyCSeEIan9RB
-        h024qGnofxuTVI/Kpm2KNtVf1YJQg1xaFBKNaotsERl7bnR77/qPiFlYV0+/AKCuqZll5+Sx/KIy1tHd
-        9zcD6OjsZoWlFex8bgErq65jUefi2dCVcXb33s/YG/cfPJeSkdX1GqnNvLJp4aUY9+XQp6uoIB/jSSCq
-        qRtA2dnpw+7/7MGPY6Txwy+dMEBsUh0xwzRdOqiBCPkF2QjRXRgMRGYPxyZnzNa399jK+hZnFZacnsVq
-        5U1/N4ASXo6Z2Wxze5e9/gYH8Cbb2dvXtLCx+9DA1BXpNNC4L3wK55Fv0lQ5XjopQkRM3MzBnbvPs/s/
-        f8Bfkv5zaETkpIau0Z9FFk6wsD0FU0t30jPW/O7566paecQmObG4usmW1jbZxs4+u1xYwmoa5X83gKLy
-        anq+hL3/4a/Yg7feJnuLvfve+2xqds7a3tntnrahxbdiK09I7HwhlrhAS8/kS//gkPn17Z2X7z94i1Ha
-        7rM7d9+gGpx5LSYuochMYrWkrqFzg5hhw+u0f091XePZnt7hH3X1DrLH1t07xJoUStbY0vr/AiBPVsT+
-        /ZfvsTd/8ZZgv3j7HaLeA6bq7rHyCwpTiMSWWyfVdQ/E5pYr0oTE0qGxcY3d6wfsDmXsyP+2OU525OJx
-        siMXj5MduXic7MjF42RHLh4nO3Lx+BjY/wGVnGOj9CI0sgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;panelSplit1.Name" xml:space="preserve">
-    <value>panelSplit1</value>
   </data>
   <data name="btnAccelerometer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -800,39 +711,6 @@
         zR5VE3BuZw7QlJSUtBu5w4nzKODvUgH+n4vPfcgVdnFxceuYmYl1EJpbmpqaTMy4/AfJ71oBFhnM0khW
         BrjOstTU1BXAUDb8HzCT1e1VYI76H/FnCpuOkSqpAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="btnConfig.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="btnESC.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
-  </data>
-  <data name="btnConfig.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>727, 89</value>
-  </data>
-  <data name="&gt;&gt;btnConfig.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;btnCompass.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnAccelerometer.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;btnESC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnBattery.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelSplit2.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="btnConfig.Text" xml:space="preserve">
-    <value>&amp;Config</value>
   </data>
   <data name="btnSetups.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -939,6 +817,140 @@
         HtfqCu/VV9RBqb6arAZKyqph4vDRH0lgBv4bAFACJQPLGg0AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="&gt;&gt;panelSplit1.Name" xml:space="preserve">
+    <value>panelSplit1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.TabItem, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnConfig.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>727, 89</value>
+  </data>
+  <data name="&gt;&gt;btnAccelerometer.Name" xml:space="preserve">
+    <value>btnAccelerometer</value>
+  </data>
+  <data name="btnBattery.Text" xml:space="preserve">
+    <value>&amp;Battery</value>
+  </data>
+  <data name="btnESC.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="&gt;&gt;btnControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnControl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btnConfig.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;btnCompass.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnAccelerometer.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;btnESC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBattery.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAccelerometer.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnConfig.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="btnControl.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
   <data name="btnCompass.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
@@ -1008,9 +1020,6 @@
         uUm5V0MyS/N3ZJQUiC5nZf06t0xNIaribb68A33c/wH6UINT+/iFogAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnConfig.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="btnSetups.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
@@ -1020,17 +1029,14 @@
   <data name="btnControl.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="btnControl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;btnESC.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnBattery.Location" type="System.Drawing.Point, System.Drawing">
     <value>541, 3</value>
   </data>
-  <data name="btnESC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>453, 3</value>
+  <data name="&gt;&gt;btnCompass.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="panelSplit1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1038,32 +1044,29 @@
   <data name="btnControl.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;btnConfig.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;panelSplit2.Name" xml:space="preserve">
+    <value>panelSplit2</value>
   </data>
   <data name="btnSetups.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="btnSetups.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="btnAlignment.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.TabItem, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SettingsTab</value>
   </data>
   <data name="btnAlignment.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
   </data>
-  <data name="btnBattery.Text" xml:space="preserve">
-    <value>&amp;Battery</value>
+  <data name="btnCompass.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
   </data>
   <data name="btnBattery.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="btnCompass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
+  <data name="btnSetups.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
   </data>
   <data name="btnConfig.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1143,17 +1146,14 @@
         Vm5+R3anZWrkHzkuWCjXe8fwC/sfujCqzyA9+eEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;btnAccelerometer.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="btnAlignment.Location" type="System.Drawing.Point, System.Drawing">
     <value>189, 3</value>
   </data>
   <data name="&gt;&gt;btnConfig.Name" xml:space="preserve">
     <value>btnConfig</value>
   </data>
-  <data name="btnESC.Text" xml:space="preserve">
-    <value>&amp;ESC</value>
+  <data name="btnControl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btnAlignment.Text" xml:space="preserve">
     <value>&amp;Alignment</value>

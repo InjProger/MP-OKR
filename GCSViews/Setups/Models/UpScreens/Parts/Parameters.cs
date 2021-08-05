@@ -4,7 +4,6 @@ namespace MissionPlanner.GCSViews.Setups.Models.UpScreens.Parts
     public class Parameters
     {
         public bool UavId { get; set; }
-        public bool Arming { get; set; }
         public bool Satellites { get; set; }
         public bool SignalLevel { get; set; }
         public bool Inclination { get; set; }

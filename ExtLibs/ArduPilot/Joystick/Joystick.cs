@@ -872,7 +872,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                
+                                CustomMessageBox.Show( "Failed to DO_SET_SERVO" );
                             }
                         }, null);
                         break;

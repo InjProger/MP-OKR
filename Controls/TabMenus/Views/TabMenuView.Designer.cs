@@ -67,6 +67,7 @@
             // 
             // panelMenu
             // 
+            resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Controls.Add(this.taskTab);
             this.panelMenu.Controls.Add(this.pbTabDown);
             this.panelMenu.Controls.Add(this.pbTabUp);
@@ -79,43 +80,42 @@
             this.panelMenu.Controls.Add(this.btnAirfields);
             this.panelMenu.Controls.Add(this.btnView);
             this.panelMenu.Controls.Add(this.btnTask);
-            resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Name = "panelMenu";
             // 
             // taskTab
             // 
-            this.taskTab.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.taskTab, "taskTab");
+            this.taskTab.BackColor = System.Drawing.Color.Transparent;
             this.taskTab.Name = "taskTab";
             // 
             // viewTab
             // 
-            this.viewTab.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.viewTab, "viewTab");
+            this.viewTab.BackColor = System.Drawing.Color.Transparent;
             this.viewTab.Name = "viewTab";
             // 
             // airfieldsTab
             // 
-            this.airfieldsTab.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.airfieldsTab, "airfieldsTab");
+            this.airfieldsTab.BackColor = System.Drawing.Color.Transparent;
             this.airfieldsTab.Name = "airfieldsTab";
             // 
             // settingsTab
             // 
-            this.settingsTab.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.settingsTab, "settingsTab");
+            this.settingsTab.BackColor = System.Drawing.Color.Transparent;
             this.settingsTab.Name = "settingsTab";
             // 
             // blackBoxTab
             // 
-            this.blackBoxTab.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.blackBoxTab, "blackBoxTab");
+            this.blackBoxTab.BackColor = System.Drawing.Color.Transparent;
             this.blackBoxTab.Name = "blackBoxTab";
             // 
             // btnBlackBox
             // 
-            this.btnBlackBox.Clicked = false;
             resources.ApplyResources(this.btnBlackBox, "btnBlackBox");
+            this.btnBlackBox.Clicked = false;
             this.btnBlackBox.Name = "btnBlackBox";
             this.btnBlackBox.Tag = "4";
             this.btnBlackBox.UseVisualStyleBackColor = true;
@@ -123,8 +123,8 @@
             // 
             // btnSettings
             // 
-            this.btnSettings.Clicked = false;
             resources.ApplyResources(this.btnSettings, "btnSettings");
+            this.btnSettings.Clicked = false;
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Tag = "3";
             this.btnSettings.UseVisualStyleBackColor = true;
@@ -132,8 +132,8 @@
             // 
             // btnAirfields
             // 
-            this.btnAirfields.Clicked = false;
             resources.ApplyResources(this.btnAirfields, "btnAirfields");
+            this.btnAirfields.Clicked = false;
             this.btnAirfields.Name = "btnAirfields";
             this.btnAirfields.Tag = "2";
             this.btnAirfields.UseVisualStyleBackColor = true;
@@ -141,8 +141,8 @@
             // 
             // btnView
             // 
-            this.btnView.Clicked = false;
             resources.ApplyResources(this.btnView, "btnView");
+            this.btnView.Clicked = false;
             this.btnView.Name = "btnView";
             this.btnView.Tag = "1";
             this.btnView.UseVisualStyleBackColor = true;
@@ -150,8 +150,8 @@
             // 
             // btnTask
             // 
-            this.btnTask.Clicked = true;
             resources.ApplyResources(this.btnTask, "btnTask");
+            this.btnTask.Clicked = true;
             this.btnTask.Name = "btnTask";
             this.btnTask.Tag = "0";
             this.btnTask.UseVisualStyleBackColor = true;
@@ -159,35 +159,35 @@
             // 
             // panelMapEdit
             // 
+            resources.ApplyResources(this.panelMapEdit, "panelMapEdit");
             this.panelMapEdit.Controls.Add(this.btnMapEditing);
             this.panelMapEdit.Controls.Add(this.mapEditTab);
-            resources.ApplyResources(this.panelMapEdit, "panelMapEdit");
             this.panelMapEdit.Name = "panelMapEdit";
             // 
             // btnMapEditing
             // 
-            this.btnMapEditing.Clicked = true;
             resources.ApplyResources(this.btnMapEditing, "btnMapEditing");
+            this.btnMapEditing.Clicked = true;
             this.btnMapEditing.Name = "btnMapEditing";
             this.btnMapEditing.Tag = "0";
             this.btnMapEditing.UseVisualStyleBackColor = true;
             // 
             // mapEditTab
             // 
+            resources.ApplyResources(this.mapEditTab, "mapEditTab");
             this.mapEditTab.BackColor = System.Drawing.Color.Transparent;
             this.mapEditTab.FlyToPointVisible = false;
-            resources.ApplyResources(this.mapEditTab, "mapEditTab");
             this.mapEditTab.Name = "mapEditTab";
             this.mapEditTab.Result = MissionPlanner.Controls.TabMenus.Views.Tabs.EResult.Ok;
             // 
             // TabMenuView
             // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelMapEdit);
             this.Name = "TabMenuView";
-            resources.ApplyResources(this, "$this");
             ((System.ComponentModel.ISupportInitialize)(this.pbTabUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTabDown)).EndInit();
             this.panelMenu.ResumeLayout(false);

@@ -208,9 +208,6 @@
   <data name="btnOpen.Text" xml:space="preserve">
     <value>&amp;Открыть</value>
   </data>
-  <data name="btnDownload.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
   <data name="btnDownload.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
@@ -338,6 +335,6 @@
 </value>
   </data>
   <data name="btnDownload.Text" xml:space="preserve">
-    <value>&amp;Загрузить</value>
+    <value>&amp;Скачать</value>
   </data>
 </root>

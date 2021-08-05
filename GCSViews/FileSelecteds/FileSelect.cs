@@ -160,7 +160,7 @@ namespace MissionPlanner.GCSViews.FileSelecteds
             switch ( _eOpenFileItem )
             {
                 case EOpenFileItem.Mission:
-                    if ( MessageBox.Show( question, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question ) == DialogResult.Yes )
+                    if ( MessageBox.Show( question, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question ) == DialogResult.OK )
                     {
                         foreach ( DataGridViewRow row in dataGridView.SelectedRows )
                         {
@@ -173,7 +173,7 @@ namespace MissionPlanner.GCSViews.FileSelecteds
                     }
                     break;
                 case EOpenFileItem.BlackBox:
-                    if ( MessageBox.Show( question, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question ) == DialogResult.Yes )
+                    if ( MessageBox.Show( question, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question ) == DialogResult.OK )
                     {
                         foreach ( DataGridViewRow row in dataGridView.SelectedRows )
                         {

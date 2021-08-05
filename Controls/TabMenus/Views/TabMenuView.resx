@@ -117,86 +117,104 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pbTabUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pbTabUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
+  <data name="btnView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 3</value>
   </data>
-  <data name="pbTabUp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 51</value>
   </data>
-  <data name="pbTabUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>759, 0</value>
-  </data>
-  <data name="pbTabUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
+  <data name="btnSettings.Text" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pbTabUp.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
+  <data name="airfieldsTab.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;viewTab.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="btnBlackBox.Text" xml:space="preserve">
+    <value>ORD</value>
+  </data>
+  <data name="&gt;&gt;btnBlackBox.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnTask.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="btnBlackBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 51</value>
+  </data>
+  <data name="&gt;&gt;btnAirfields.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnMapEditing.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSettings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;settingsTab.Name" xml:space="preserve">
+    <value>settingsTab</value>
+  </data>
+  <data name="settingsTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 70, 0</value>
+  </data>
+  <data name="settingsTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>746, 89</value>
+  </data>
+  <data name="btnMapEditing.Text" xml:space="preserve">
+    <value>Map editing</value>
+  </data>
+  <data name="&gt;&gt;settingsTab.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="taskTab.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;panelMapEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnView.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Name" xml:space="preserve">
+    <value>btnSettings</value>
+  </data>
+  <data name="&gt;&gt;panelMapEdit.Name" xml:space="preserve">
+    <value>panelMapEdit</value>
+  </data>
   <data name="&gt;&gt;pbTabUp.Name" xml:space="preserve">
     <value>pbTabUp</value>
   </data>
-  <data name="&gt;&gt;pbTabUp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnTask.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="&gt;&gt;pbTabUp.Parent" xml:space="preserve">
-    <value>panelMenu</value>
+  <data name="btnView.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="&gt;&gt;pbTabUp.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="settingsTab.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
-  <data name="pbTabDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;viewTab.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.ViewTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="pbTabDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -247,457 +265,439 @@
         RK5CYII=
 </value>
   </data>
-  <data name="pbTabDown.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pbTabDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>759, 0</value>
-  </data>
-  <data name="pbTabDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="pbTabDown.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="pbTabDown.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pbTabDown.Name" xml:space="preserve">
-    <value>pbTabDown</value>
-  </data>
-  <data name="&gt;&gt;pbTabDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbTabDown.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;pbTabDown.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="taskTab.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="taskTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 55</value>
-  </data>
-  <data name="taskTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 6, 6, 6</value>
-  </data>
-  <data name="taskTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>875, 88</value>
-  </data>
-  <data name="taskTab.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;taskTab.Name" xml:space="preserve">
-    <value>taskTab</value>
-  </data>
-  <data name="&gt;&gt;taskTab.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.TaskTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;taskTab.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;taskTab.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="viewTab.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="viewTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 56</value>
-  </data>
-  <data name="viewTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 6, 6, 6</value>
-  </data>
-  <data name="viewTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 86</value>
-  </data>
-  <data name="viewTab.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="viewTab.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;viewTab.Name" xml:space="preserve">
-    <value>viewTab</value>
-  </data>
-  <data name="&gt;&gt;viewTab.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.ViewTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;viewTab.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;viewTab.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="airfieldsTab.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="airfieldsTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 54</value>
-  </data>
-  <data name="airfieldsTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 6, 6, 6</value>
-  </data>
-  <data name="airfieldsTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>393, 87</value>
-  </data>
-  <data name="airfieldsTab.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="airfieldsTab.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;airfieldsTab.Name" xml:space="preserve">
-    <value>airfieldsTab</value>
-  </data>
-  <data name="&gt;&gt;airfieldsTab.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.AirfieldsTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;airfieldsTab.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;airfieldsTab.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="settingsTab.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="settingsTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 54</value>
-  </data>
-  <data name="settingsTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 6, 6, 6</value>
-  </data>
-  <data name="settingsTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>746, 89</value>
-  </data>
-  <data name="settingsTab.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="settingsTab.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;settingsTab.Name" xml:space="preserve">
-    <value>settingsTab</value>
-  </data>
-  <data name="&gt;&gt;settingsTab.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.SettingsTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;settingsTab.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;settingsTab.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="blackBoxTab.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="blackBoxTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 54</value>
-  </data>
-  <data name="blackBoxTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 6, 6, 6</value>
-  </data>
-  <data name="blackBoxTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 87</value>
-  </data>
-  <data name="blackBoxTab.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="blackBoxTab.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;blackBoxTab.Name" xml:space="preserve">
-    <value>blackBoxTab</value>
-  </data>
-  <data name="&gt;&gt;blackBoxTab.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.BlackBoxTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;blackBoxTab.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;blackBoxTab.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btnBlackBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnBlackBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnBlackBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 3</value>
-  </data>
-  <data name="btnBlackBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 51</value>
-  </data>
-  <data name="btnBlackBox.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="btnBlackBox.Text" xml:space="preserve">
-    <value>ORD</value>
-  </data>
-  <data name="&gt;&gt;btnBlackBox.Name" xml:space="preserve">
-    <value>btnBlackBox</value>
-  </data>
-  <data name="&gt;&gt;btnBlackBox.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnBlackBox.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnBlackBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="btnSettings.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnSettings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 3</value>
-  </data>
-  <data name="btnSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 51</value>
-  </data>
-  <data name="btnSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="btnSettings.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="&gt;&gt;btnSettings.Name" xml:space="preserve">
-    <value>btnSettings</value>
-  </data>
-  <data name="&gt;&gt;btnSettings.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnSettings.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnSettings.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="btnAirfields.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnAirfields.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAirfields.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 3</value>
-  </data>
-  <data name="btnAirfields.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 51</value>
-  </data>
-  <data name="btnAirfields.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="btnAirfields.Text" xml:space="preserve">
-    <value>SLP</value>
-  </data>
-  <data name="&gt;&gt;btnAirfields.Name" xml:space="preserve">
-    <value>btnAirfields</value>
-  </data>
-  <data name="&gt;&gt;btnAirfields.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnAirfields.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnAirfields.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btnView.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnView.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 3</value>
+  <data name="panelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="btnView.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 51</value>
   </data>
-  <data name="btnView.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="btnView.Text" xml:space="preserve">
-    <value>View</value>
-  </data>
-  <data name="&gt;&gt;btnView.Name" xml:space="preserve">
-    <value>btnView</value>
-  </data>
-  <data name="&gt;&gt;btnView.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnView.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnView.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="btnTask.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnTask.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnTask.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnTask.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="btnTask.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 51</value>
-  </data>
-  <data name="btnTask.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="btnTask.Text" xml:space="preserve">
-    <value>Task</value>
-  </data>
-  <data name="&gt;&gt;btnTask.Name" xml:space="preserve">
-    <value>btnTask</value>
-  </data>
-  <data name="&gt;&gt;btnTask.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnTask.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;btnTask.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="panelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>878, 141</value>
-  </data>
-  <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Name" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnMapEditing.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnMapEditing.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnMapEditing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnMapEditing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 4</value>
-  </data>
-  <data name="btnMapEditing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 51</value>
-  </data>
-  <data name="btnMapEditing.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="btnMapEditing.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="&gt;&gt;btnMapEditing.Name" xml:space="preserve">
-    <value>btnMapEditing</value>
-  </data>
   <data name="&gt;&gt;btnMapEditing.Type" xml:space="preserve">
     <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnMapEditing.Parent" xml:space="preserve">
-    <value>panelMapEdit</value>
-  </data>
-  <data name="&gt;&gt;btnMapEditing.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="mapEditTab.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="mapEditTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 56</value>
-  </data>
-  <data name="mapEditTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 6, 6, 6</value>
-  </data>
-  <data name="mapEditTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>850, 85</value>
-  </data>
-  <data name="mapEditTab.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;mapEditTab.Name" xml:space="preserve">
-    <value>mapEditTab</value>
-  </data>
-  <data name="&gt;&gt;mapEditTab.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.MapEditTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mapEditTab.Parent" xml:space="preserve">
-    <value>panelMapEdit</value>
-  </data>
-  <data name="&gt;&gt;mapEditTab.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panelMapEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panelMapEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panelMapEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>878, 141</value>
-  </data>
-  <data name="panelMapEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="panelMapEdit.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;panelMapEdit.Name" xml:space="preserve">
-    <value>panelMapEdit</value>
+  <data name="pbTabDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="&gt;&gt;panelMapEdit.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelMapEdit.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;btnAirfields.Name" xml:space="preserve">
+    <value>btnAirfields</value>
   </data>
-  <data name="&gt;&gt;panelMapEdit.ZOrder" xml:space="preserve">
+  <data name="btnMapEditing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 4</value>
+  </data>
+  <data name="&gt;&gt;pbTabDown.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="btnMapEditing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 51</value>
+  </data>
+  <data name="panelMapEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>878, 141</value>
+  </data>
+  <data name="&gt;&gt;viewTab.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="btnBlackBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbTabDown.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnTask.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="airfieldsTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 54</value>
+  </data>
+  <data name="&gt;&gt;btnTask.Name" xml:space="preserve">
+    <value>btnTask</value>
+  </data>
+  <data name="blackBoxTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>878, 141</value>
+  </data>
+  <data name="&gt;&gt;btnView.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="settingsTab.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="btnAirfields.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="settingsTab.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnMapEditing.Parent" xml:space="preserve">
+    <value>panelMapEdit</value>
+  </data>
+  <data name="btnView.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;settingsTab.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.SettingsTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pbTabDown.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 70, 0</value>
+  <data name="&gt;&gt;btnSettings.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>948, 141</value>
+  <data name="btnTask.Text" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="viewTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 56</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mapEditTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAirfields.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;pbTabDown.Name" xml:space="preserve">
+    <value>pbTabDown</value>
+  </data>
+  <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="mapEditTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 56</value>
+  </data>
+  <data name="&gt;&gt;blackBoxTab.Name" xml:space="preserve">
+    <value>blackBoxTab</value>
+  </data>
+  <data name="blackBoxTab.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TabMenuView</value>
   </data>
+  <data name="&gt;&gt;btnAirfields.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;taskTab.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Name" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="pbTabUp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnView.Text" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="btnBlackBox.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;btnMapEditing.Name" xml:space="preserve">
+    <value>btnMapEditing</value>
+  </data>
+  <data name="&gt;&gt;btnAirfields.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnBlackBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;airfieldsTab.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.AirfieldsTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="mapEditTab.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="mapEditTab.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;btnTask.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="pbTabDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>759, 0</value>
+  </data>
+  <data name="&gt;&gt;mapEditTab.Parent" xml:space="preserve">
+    <value>panelMapEdit</value>
+  </data>
+  <data name="airfieldsTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="&gt;&gt;airfieldsTab.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;taskTab.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.TaskTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pbTabUp.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;pbTabUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="taskTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>875, 88</value>
+  </data>
+  <data name="blackBoxTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 87</value>
+  </data>
+  <data name="pbTabUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;airfieldsTab.Name" xml:space="preserve">
+    <value>airfieldsTab</value>
+  </data>
+  <data name="btnAirfields.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 51</value>
+  </data>
+  <data name="panelMapEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pbTabDown.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btnView.Name" xml:space="preserve">
+    <value>btnView</value>
+  </data>
+  <data name="blackBoxTab.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;airfieldsTab.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="settingsTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 54</value>
+  </data>
+  <data name="panelMapEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;blackBoxTab.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnAirfields.Text" xml:space="preserve">
+    <value>Airfields</value>
+  </data>
+  <data name="&gt;&gt;viewTab.Name" xml:space="preserve">
+    <value>viewTab</value>
+  </data>
+  <data name="btnMapEditing.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 3</value>
+  </data>
+  <data name="&gt;&gt;panelMapEdit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="taskTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="pbTabUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>759, 0</value>
+  </data>
+  <data name="&gt;&gt;blackBoxTab.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="viewTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>589, 86</value>
+  </data>
+  <data name="btnMapEditing.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>948, 141</value>
+  </data>
+  <data name="viewTab.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnBlackBox.Name" xml:space="preserve">
+    <value>btnBlackBox</value>
+  </data>
+  <data name="blackBoxTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 54</value>
+  </data>
+  <data name="btnBlackBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 3</value>
+  </data>
+  <data name="&gt;&gt;pbTabDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="viewTab.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="btnTask.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btnView.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.Buttons.ClickedButton, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="pbTabUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="btnAirfields.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 3</value>
+  </data>
+  <data name="panelMapEdit.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;taskTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnTask.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnMapEditing.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mapEditTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>850, 85</value>
+  </data>
+  <data name="taskTab.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="taskTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 55</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pbTabDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="&gt;&gt;btnBlackBox.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;taskTab.Name" xml:space="preserve">
+    <value>taskTab</value>
+  </data>
+  <data name="&gt;&gt;btnView.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="btnAirfields.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnMapEditing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;mapEditTab.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.MapEditTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;settingsTab.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="panelMapEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnTask.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 51</value>
+  </data>
+  <data name="airfieldsTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>393, 87</value>
+  </data>
+  <data name="btnTask.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;pbTabUp.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;blackBoxTab.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.TabMenus.Views.Tabs.BlackBoxTab, MissionPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="pbTabUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="&gt;&gt;btnTask.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="blackBoxTab.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mapEditTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="viewTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="&gt;&gt;mapEditTab.Name" xml:space="preserve">
+    <value>mapEditTab</value>
+  </data>
+  <data name="&gt;&gt;btnBlackBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="airfieldsTab.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="pbTabDown.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="viewTab.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="airfieldsTab.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

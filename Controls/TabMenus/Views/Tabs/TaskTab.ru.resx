@@ -590,7 +590,7 @@
 </value>
   </data>
   <data name="btnEdit.Text" xml:space="preserve">
-    <value>&amp;Редакт.</value>
+    <value>&amp;Изменить</value>
   </data>
   <data name="btnArm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -653,7 +653,10 @@
 </value>
   </data>
   <data name="btnArm.Text" xml:space="preserve">
-    <value>АКТИВ.</value>
+    <value>&amp;ВКЛЮЧИТЬ</value>
+  </data>
+  <data name="btnDisarm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 6.75pt</value>
   </data>
   <data name="btnDisarm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -739,7 +742,7 @@
 </value>
   </data>
   <data name="btnDisarm.Text" xml:space="preserve">
-    <value>ДЕАКТИВ.</value>
+    <value>&amp;ВЫКЛЮЧИТЬ</value>
   </data>
   <data name="btnMessages.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

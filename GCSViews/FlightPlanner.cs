@@ -5518,7 +5518,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                             }
                             sw.Close( );
                             var savedText = resourceManager.GetString( "savedText", CultureInfo.CurrentUICulture );                           
-                            CustomMessageBox.Show( savedText + " " + Path.GetFileName( file ) );
+                            CustomMessageBox.Show( savedText + Path.GetFileName( file ) );
                         }
                         catch ( Exception )
                         {
@@ -6304,8 +6304,12 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 "DO_CHANGE_SPEED",
                 "LOITER_TURNS",
                 "LOITER_TIME",
-                "RETURN_TO_LAUNCH"
+                "LOITER_UNLIM",
+                "RETURN_TO_LAUNCH",
+                "SHOT"
             };
+
+            cmds.Add("UNKNOWN");
 
             Command.DataSource = cmds;
 
@@ -7954,12 +7958,9 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
                     FlightPlanner.Instance.lblRemainingTime.Text = residualTimeValue.ToString("0.00");
                     FlightPlanner.Instance.lblRemainingDistance.Text = Radius.ToString( );
-                    
+                    FlightPlanner.Instance.lblRemainingBattery.Text = residualVoltageValue.ToString( "0.00" );
 
                     FlightPlanner.Instance.lblSpentDistance.Text = ( ( int ) D ).ToString( );
-
-
-                    FlightPlanner.Instance.lblRemainingBattery.Text = residualVoltageValue.ToString( "0.00" );
                 }
             }
 
