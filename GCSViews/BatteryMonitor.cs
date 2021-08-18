@@ -17,6 +17,7 @@ namespace MissionPlanner.GCSViews
             InitializeComponent( );
             Location = Screen.AllScreens[ 0 ].Bounds.Location;
             StartPosition = FormStartPosition.CenterScreen;
+            configBatteryMonitoring1.Activate( );
         }
     }
 }

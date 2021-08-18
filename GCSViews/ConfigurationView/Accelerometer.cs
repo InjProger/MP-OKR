@@ -17,6 +17,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             InitializeComponent( );
             Location = Screen.AllScreens[ 0 ].Bounds.Location;
             StartPosition = FormStartPosition.CenterScreen;
+            configAccelerometerCalibration1.Activate( );
         }
     }
 }

@@ -1309,9 +1309,6 @@
     <EmbeddedResource Include="GCSViews\Setups\Views\SettingView.resx">
       <DependentUpon>SettingView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Setups\Views\SettingView.ru-BY.resx">
-      <DependentUpon>SettingView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Setups\Views\SettingView.ru.resx">
       <DependentUpon>SettingView.cs</DependentUpon>
     </EmbeddedResource>

@@ -445,6 +445,9 @@ namespace MissionPlanner
             settings.btnConfig.Enabled = enabled;
 
             blackBox.btnDownload.Enabled = enabled;
+
+            btnConnect.Visible = !enabled;
+            btnDisconnect.Visible = enabled;
         }
 
         static MAVLinkInterface _comPort = new MAVLinkInterface( );
@@ -637,11 +640,15 @@ namespace MissionPlanner
         {
             if ( MainV2.ComPort.MAV.param.ContainsKey( "COMPASS_PRIO1_ID" ) )
             {
-                new ConfigHWCompass2( ).ShowUserControl( );
+                var compass2 = new ConfigHWCompass2( );
+                compass2.Activate( );
+                compass2.ShowUserControl( );
             }
             else
             {
-                new ConfigHWCompass( ).ShowUserControl( );
+                var compass1 = new ConfigHWCompass( );
+                compass1.ShowUserControl( );
+                compass1.ShowUserControl( );
             }
         }
 
@@ -1154,7 +1161,7 @@ namespace MissionPlanner
                 Local = measure.Local,
                 Voltage = measure.Voltage,
                 Capacity = measure.Capacity,
-                Speed = speed == ESpeed.M_s ? measure.Distance[ 0 ] : measure.Distance[ 1 ],
+                Speed = speed == ESpeed.M_s ? measure.Speed[ 0 ] : measure.Speed[ 1 ],
                 Distance = speed == ESpeed.M_s ? measure.Distance[ 0 ] : measure.Distance[ 1 ],
                 CardinalPoints = measure.CardinalPoints,
                 FlightMode = measure.FlightMode,
@@ -1495,10 +1502,7 @@ namespace MissionPlanner
             {
                 hudThread?.Abort( );
                 hudThread = null;
-                IsConnected = false;
-
-                FlightPlanner.IsConnect = false;
-
+                
                 _movingBase.BUT_connect_Click( this, new EventArgs( ) );
 
                 log.Info( "We are disconnecting" );
@@ -1619,7 +1623,6 @@ namespace MissionPlanner
                         {
                             CustomMessageBox.Show( Strings.Timeout );
                             _connectionControl.IsConnected( false );
-                            IsConnected = false;
                             return;
                         }
                     }
@@ -1631,7 +1634,6 @@ namespace MissionPlanner
 
             // Tell the connection UI that we are now connected.
             _connectionControl.IsConnected( true );
-            FlightPlanner.IsConnect = IsConnected = true;
 
             // Here we want to reset the connection stats counter etc.
             this.ResetConnectionStats( );
@@ -1660,7 +1662,6 @@ namespace MissionPlanner
                 catch ( Exception exp )
                 {
                     log.Error( exp );
-                    IsConnected = false;
                 }
 
                 // prevent serialreader from doing anything
@@ -1716,7 +1717,6 @@ namespace MissionPlanner
                 catch ( Exception exp2 )
                 {
                     log.Error( exp2 );
-                    IsConnected = false;
                     CustomMessageBox.Show( Strings.Failclog );
                 } // soft fail
 
@@ -1732,13 +1732,11 @@ namespace MissionPlanner
                     try
                     {
                         _connectionControl.IsConnected( false );
-                        IsConnected = false;
                         UpdateConnectIcon( );
                         comPort.Close( );
                     }
                     catch
                     {
-                        IsConnected = false;
                     }
                     return;
                 }
@@ -1858,7 +1856,6 @@ namespace MissionPlanner
                     catch ( Exception ex ) 
                     { 
                         log.Warn( ex );
-                        IsConnected = false;
                     }
                 }
 
@@ -1873,7 +1870,6 @@ namespace MissionPlanner
                     }
                     catch ( Exception ex ) 
                     {
-                        IsConnected = false;
                         log.Warn( ex ); 
                     }
                 }
@@ -1889,14 +1885,12 @@ namespace MissionPlanner
             }
             catch ( Exception ex )
             {
-                IsConnected = false;
                 log.Warn( ex );
                 try
                 {
                     _connectionControl.IsConnected( false );
                     UpdateConnectIcon( );
                     comPort.Close( );
-                    IsConnected = false;
                 }
                 catch ( Exception ex2 )
                 {
@@ -1975,7 +1969,6 @@ namespace MissionPlanner
         {   
             if ( PreMethod() )
             {
-                IsConnected = false;
                 var uav = Configurator.Connection.Uav;
                 DoConnect(ComPort, uav.Name, uav.Baudrate.ToString());
 
@@ -2519,8 +2512,11 @@ namespace MissionPlanner
                            this.MenuConnect.Image = displayicons.Disconnect;
                            this.MenuConnect.Image.Tag = "Disconnect";
                            this.MenuConnect.Text = Strings.DISCONNECTc;
+
                            _connectionControl.IsConnected(true);
-                       });
+                            IsConnected = true;
+                           ConnectButtonEnabled( IsConnected );
+                       } );
                     }
                 }
                 else
@@ -2532,7 +2528,11 @@ namespace MissionPlanner
                            this.MenuConnect.Image = displayicons.Connect;
                            this.MenuConnect.Image.Tag = "Connect";
                            this.MenuConnect.Text = Strings.CONNECTc;
+
                            _connectionControl.IsConnected(false);
+                           IsConnected = false;
+                           ConnectButtonEnabled( IsConnected );
+
                            if (_connectionStats != null)
                            {
                                _connectionStats.StopUpdates();
@@ -3991,7 +3991,6 @@ namespace MissionPlanner
 
             var connectResult = new ConnectionView( ).ShowDialog( );
             tabMenuView.blackBoxTab.btnOpen.Enabled = true;
-            btnConnect.Enabled = true;
 
             switch ( connectResult )
             {
@@ -4045,6 +4044,7 @@ namespace MissionPlanner
                 case DialogResult.No:
                     EnableMainButtons( false );
                     tabMenuView.taskTab.btnArm.Enabled = false;
+                    ConnectButtonEnabled( false );
 
                     if ( !FlightPlanner.Instance.timer1.Enabled )
                     {
@@ -4087,14 +4087,21 @@ namespace MissionPlanner
 
         private ECameras GetCurrentCamera ( )
         {
-            switch ( MainV2.Joystick.State.ViewPoints[ 7 ] )
+            try
             {
-                case -32768: // УЗ
-                    return ECameras.Aiming;
-                case 0: // ИК
-                    return ECameras.Infrared;
-                default: // ШЗ
-                    return ECameras.Wide;
+                switch ( MainV2.Joystick.State.ViewPoints[ 7 ] )
+                {
+                    case -32768: // УЗ
+                        return ECameras.Aiming;
+                    case 0: // ИК
+                        return ECameras.Infrared;
+                    default: // ШЗ
+                        return ECameras.Wide;
+                }
+            }
+            catch 
+            {
+                return ECameras.Wide;
             }
         }
 
@@ -5230,7 +5237,7 @@ namespace MissionPlanner
                 streamWorker.Update( EParam.BATTERY_CAPACITY, FlightPlanner.Instance.lblSpentBattery.Text.Replace( ',', '.' ) + _measure.Capacity );
                 streamWorker.Update( EParam.BATTERY_TIME_LEFT, FlightPlanner.Instance.lblRemainingTime.Text.Replace( ',', '.' ) );
                 streamWorker.Update( EParam.FLIGHT_PATH, cs.distTraveled.ToString( "0" ) + _measure.Distance );
-                streamWorker.Update( EParam.FLIGHT_TIME, cs.timeInAir.ToString( "0" ) );
+                streamWorker.Update( EParam.FLIGHT_TIME, ( cs.timeInAir / 60 ).ToString( "0" ) + "." + ( cs.timeInAir % 60 ).ToString( "0" ) );
                 // streamWorker.Update( EParam.TARGET_WIDTH, .ToString( "0.#" );
                 // streamWorker.Update( EParam.TARGET_HEIGHT, .ToString( "0.#" );
                 streamWorker.Update( EParam.FLIGHT_STATUS, FlightStatus( cs.mode ) );
@@ -5238,7 +5245,7 @@ namespace MissionPlanner
                 streamWorker.Update( EParam.TARGET_LATITUDE, _targetPoint.Lat.ToString( "0.######" ).Replace( ',', '.' ) );
                 streamWorker.Update( EParam.TARGET_LONGITUDE, _targetPoint.Lng.ToString( "0.######" ).Replace( ',', '.' ) );
 
-                streamWorker.Visible( EParam.ARMING_STATUS, cs.armed );
+                //streamWorker.Visible( EParam.ARMING_STATUS, cs.armed );
 
                 var windSpeed = _windSpeedResult;
                 var windAzimuth = _windAzResult;
@@ -5292,11 +5299,11 @@ namespace MissionPlanner
                 {
                     if ( Configurator.Setting.Interface.ESpeed == ESpeed.Km_h )
                     {
-                        return SpeedConverter.ToKilometersPerHours( speed ).ToString( "0" ) + _measure.Speed;
+                        return SpeedConverter.ToKilometersPerHours( speed ).ToString( "0" );
                     }
                     else
                     {
-                        return speed.ToString( "0" ) + _measure.Speed;
+                        return speed.ToString( "0" );
                     }
                 }
 
@@ -5460,25 +5467,21 @@ namespace MissionPlanner
         private Color getEkfStatus ( ) 
         {
             var status = MainV2.ComPort.MAV.cs.ekfstatus;
-            Color color = new Color( );
-            switch ( status ) 
+
+            switch ( status )
             {
                 case 0:
-                    color = Color.White;
-                    break;
+                    return Color.White;
                 case 1:
-                    color = Color.Red;
-                    break;
+                    return Color.Red;
+                default:
+                    return Color.White;
             }
-            return color;
         }
 
         private void lblGpsStatus_Click ( object sender, EventArgs e )
         {
-            if ( MainV2.ComPort.MAV.cs.gpsstatus < 2 )
-            {
-                MainV2.Joystick.Gps = 1000;
-            }
+            MainV2.Joystick.Gps = ( short ) ( MainV2.ComPort.MAV.cs.gpsstatus < 2 ? 1000 : 2000 );
         }
 
         private Color getTelemLvl () 
@@ -5500,7 +5503,8 @@ namespace MissionPlanner
             lblRSSI.ForeColor = getTelemLvl( );
             lblEkfStatus.ForeColor = getEkfStatus();
             FlightPlanner.MainMap.Overlays[ 4 ].Markers.Clear( );
-            
+            FlightPlanner.routesoverlay.Markers.Clear( );
+
             var gimble = GlbContext.Uav.Device.Gimble;
             var gimbleAngle = Configurator.Setting.General.AutoMode.GimbleAngle * Math.PI / 180;
             var pitch = _gimbleAngle = gimble is null ? gimbleAngle : GetGimblePitch( );
@@ -5513,6 +5517,8 @@ namespace MissionPlanner
             _targetPoint = new PointLatLng( targetLat, targetLon );
 
             var targetMarker = new GMarkerGoogle( _targetPoint, GMarkerGoogleType.target );
+            var marker = Common.getMAVMarker( MainV2.ComPort.MAV );
+            FlightPlanner.routesoverlay.Markers.Add( marker );
 
             FlightPlanner.MainMap.Overlays[ 4 ].Markers.Add( targetMarker );
         }
@@ -5542,6 +5548,17 @@ namespace MissionPlanner
             {
                 lblGpsStatus.Text = "GPS : On";
                 lblGpsStatus.ForeColor = Color.Lime;
+            }
+
+            if ( MainV2.ComPort.MAV.cs.armed )
+            {
+                tabMenuView.taskTab.btnDisarm.Show( );
+                tabMenuView.taskTab.btnArm.Hide( );
+            }
+            else
+            {
+                tabMenuView.taskTab.btnArm.Show( );
+                tabMenuView.taskTab.btnDisarm.Hide( );
             }
 
             try
@@ -5579,17 +5596,6 @@ namespace MissionPlanner
                             SetCamera(currentCamera);
                         }
                     }
-                }
-                
-                if ( MainV2.ComPort.MAV.cs.armed )
-                {
-                    tabMenuView.taskTab.btnDisarm.Show( );
-                    tabMenuView.taskTab.btnArm.Hide( );
-                }
-                else
-                {
-                    tabMenuView.taskTab.btnArm.Show( );
-                    tabMenuView.taskTab.btnDisarm.Hide( );
                 }
 
                 MainV2.ComPort.MAV.cs.messages.ForEach(

@@ -251,8 +251,6 @@ namespace MissionPlanner.GCSViews
             }
         }
 
-        public bool IsConnect { get; set; }
-
         public void Init()
         {
             Instance = this;
@@ -4710,8 +4708,7 @@ namespace MissionPlanner.GCSViews
 
             e.Graphics.ResetTransform();
 
-            var rightMargin = MainV2.instance.btnConnect.Width + 10;
-            var scaleLine = new ScaleLine( e.Graphics, (int) trackBar1.Value, panelMap.Size, rightMargin );
+            var scaleLine = new ScaleLine( e.Graphics, (int) trackBar1.Value, panelMap.Size, 70 );
 
             scaleLine.Draw( );
         }
@@ -7767,7 +7764,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             double residualTimeValue = 0;
             double residualVoltageValue = 0;
 
-            if ( FlightPlanner.Instance.IsConnect )
+            if ( MainV2.instance.IsConnected )
             {
                 var workV = GlbContext.Uav.Device.Battery.VoltageMax - GlbContext.Uav.Device.Battery.VoltageMin;
                 var currentV = GlbContext.Uav.Device.Battery.VoltageMax - MainV2.ComPort.MAV.cs.battery_voltage;
@@ -8031,7 +8028,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
                 prop.alt = MainV2.ComPort.MAV.cs.alt;
                 prop.altasl = MainV2.ComPort.MAV.cs.altasl;
-                prop.connected = IsConnect;
+                prop.connected = MainV2.instance.IsConnected;
                 prop.center = MainMap.Position;
 
                 prop.distance.Markers.Clear( );
@@ -8046,7 +8043,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                     FlightPlanner.Instance.MainMap.Overlays[ 0 ].Markers.Add( selectMarker );
                 }
 
-                if ( IsConnect )
+                if ( MainV2.instance.IsConnected )
                 {
                     var location = MainV2.ComPort.MAV.cs.Location;
                     prop.Update( location, RadiusUav / 1.15, ECircleItem.Uav );
@@ -8063,8 +8060,6 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                         prop.Update( PointLocation( ), Radius / 1.15, ECircleItem.Point );
                     }
                 }
-
-                routesoverlay.Markers.Clear( );
 
                 /*if ( MainV2.ComPort.MAV.cs.HomeLocation.Lng != 0 )
                 {
@@ -8091,10 +8086,6 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
                 if ( MainV2.ComPort.MAV.cs.lat == 0 || MainV2.ComPort.MAV.cs.lng == 0 )
                     return;
-
-                var marker = Common.getMAVMarker( MainV2.ComPort.MAV );
-
-                routesoverlay.Markers.Add( marker );
 
                 if ( MainV2.ComPort.MAV.cs.mode.ToLower( ) == "guided" && MainV2.ComPort.MAV.GuidedMode.x != 0 )
                 {

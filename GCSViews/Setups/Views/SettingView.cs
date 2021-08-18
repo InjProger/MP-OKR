@@ -70,7 +70,7 @@ namespace MissionPlanner.GCSViews.Setups.Views
             return hrs / 100;
         }
 
-        private int ConvertHomeReturnSpeedToSantimeters ( int hrs )
+        private double ConvertHomeReturnSpeedToSantimeters ( double hrs )
         {
             return hrs * 100;
         }
