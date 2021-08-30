@@ -1149,14 +1149,14 @@ namespace MissionPlanner
 
         private Lighting _lighting;
 
-        private CurrentMeasure _measure;
+        private CurrentMeasure _currentMeasure;
 
         public void GetLocalMeasure ( )
         {
             var measure = Configurator.Measurement.GetCurrentMeasure( );
             var speed = Configurator.Setting.Interface.ESpeed;
 
-            _measure = new CurrentMeasure
+            _currentMeasure = new CurrentMeasure
             {
                 Local = measure.Local,
                 Voltage = measure.Voltage,
@@ -5172,12 +5172,15 @@ namespace MissionPlanner
         {
             while ( IsConnected )
             {
-                Thread.Sleep( 75 );
+                Thread.Sleep( 300 );
                 Update( );
             }
 
             void Update( )
             {
+                var text = string.Empty;
+                double dist = 0;
+                double bearing = 0;
                 var streamWorker = GlbContext.StreamWorker;
                 var cs = MainV2.ComPort.MAV.cs;
 
@@ -5208,44 +5211,44 @@ namespace MissionPlanner
                     streamWorker.StopRecording( );
                 }
 
-                streamWorker.Update( EParam.DRONE_NAME, Configurator.Setting.General.AutoMode.UavId );
-                streamWorker.Update( EParam.SATELLITES, cs.satcount.ToString( "0" ) );
-                streamWorker.Update( EParam.SIGNAL_LEVEL, cs.linkqualitygcs.ToString( "0") );
+                text += streamWorker.ConvertParamToString( EParam.DRONE_NAME, Configurator.Setting.General.AutoMode.UavId );
+                text += streamWorker.ConvertParamToString( EParam.SATELLITES, cs.satcount.ToString( "0" ) );
+                text += streamWorker.ConvertParamToString( EParam.SIGNAL_LEVEL, cs.linkqualitygcs.ToString( "0" ) );
 
-                var gimbleAngle = GlbContext.Uav.Device.Gimble is null ? Configurator.Setting.General.AutoMode.GimbleAngle : (int) _gimbleAngle;
-
-                streamWorker.Update( EParam.INCLINATION, gimbleAngle.ToString( "0" ) );
-                streamWorker.Update( EParam.LATITUDE, lat.ToString( "0.######" ).Replace( ',', '.' ) ); 
-                streamWorker.Update( EParam.LONGITUDE, lon.ToString( "0.######" ).Replace( ',', '.' ) );
-                streamWorker.Update( EParam.AZIMUTH, yaw.ToString( "0.#" ) );
-                streamWorker.Update( EParam.ALTITUDE_WRT_GROUND, cs.ter_curalt.ToString("0") + _measure.Distance );
-                streamWorker.Update( EParam.ALTITUDE_WRT_HOME, alt.ToString("0" ) + _measure.Distance );
-                streamWorker.Update( EParam.HORIZONTAL_SPEED, SpeedConvert( cs.groundspeed ) + _measure.Speed );
-                streamWorker.Update( EParam.VERTICAL_SPEED, SpeedConvert( cs.verticalspeed) + _measure.Speed );
-                streamWorker.Update( EParam.ROLL_ANGLE,  cs.roll.ToString( "0.#" ).Replace( ',', '.' ) );
-                streamWorker.Update( EParam.PITCH_ANGLE, _pitch.ToString( "0.#" ) );
-                streamWorker.Update( EParam.RANGE_1, 50.ToString( "0" ) );
-                streamWorker.Update( EParam.RANGE_2, 100.ToString( "0" ) );
+                var gimbleAngle = GlbContext.Uav.Device.Gimble is null ? Configurator.Setting.General.AutoMode.GimbleAngle : ( int ) _gimbleAngle;
+                
+                text += streamWorker.ConvertParamToString( EParam.INCLINATION, gimbleAngle.ToString( "0" ) );
+                text += streamWorker.ConvertParamToString( EParam.LATITUDE, lat.ToString( "0.######" ).Replace( ',', '.' ) );
+                text += streamWorker.ConvertParamToString( EParam.LONGITUDE, lon.ToString( "0.######" ).Replace( ',', '.' ) );
+                text += streamWorker.ConvertParamToString( EParam.AZIMUTH, yaw.ToString( "0.#" ) );
+                text += streamWorker.ConvertParamToString( EParam.ALTITUDE_WRT_GROUND, cs.ter_curalt.ToString( "0" ) + _currentMeasure.Distance );
+                text += streamWorker.ConvertParamToString( EParam.ALTITUDE_WRT_HOME, alt.ToString( "0" ) + _currentMeasure.Distance );
+                text += streamWorker.ConvertParamToString( EParam.HORIZONTAL_SPEED, SpeedConvert( cs.groundspeed ) + _currentMeasure.Speed );
+                text += streamWorker.ConvertParamToString( EParam.VERTICAL_SPEED, SpeedConvert( cs.verticalspeed ) + _currentMeasure.Speed );
+                text += streamWorker.ConvertParamToString( EParam.ROLL_ANGLE, cs.roll.ToString( "0.#" ).Replace( ',', '.' ) );
+                text += streamWorker.ConvertParamToString( EParam.PITCH_ANGLE, _pitch.ToString( "0.#" ) );
+                text += streamWorker.ConvertParamToString( EParam.RANGE_1, 50.ToString( "0" ) );
+                text += streamWorker.ConvertParamToString( EParam.RANGE_2, 100.ToString( "0" ) );
                 
                 var uavBattery = GlbContext.Uav.Device.Battery;
                 var voltage = cs.battery_voltage;
                 var remainingBatteryPercent = ( voltage < uavBattery.MaxConvertVoltage ) ? map( cs.battery_voltage, uavBattery.VoltageMin, uavBattery.VoltageMax ) : 1;
-                var bankCount = cs.battery_voltage / (double) uavBattery.BankCount;
+                var bankVoltage = cs.battery_voltage / ( double ) uavBattery.BankCount;
 
-                streamWorker.Update( EParam.BATTERY_LEVEL, remainingBatteryPercent.ToString( ).Replace( ',', '.' ) );
-                streamWorker.Update( EParam.BATTERY_VOLTAGE, cs.battery_voltage.ToString( "0.0" ).Replace( ',', '.' ) + _measure.Voltage + " | " + bankCount.ToString( "0.#" ).Replace( ',', '.' ) + _measure.Voltage );
-                streamWorker.Update( EParam.BATTERY_CAPACITY, FlightPlanner.Instance.lblSpentBattery.Text.Replace( ',', '.' ) + _measure.Capacity );
-                streamWorker.Update( EParam.BATTERY_TIME_LEFT, FlightPlanner.Instance.lblRemainingTime.Text.Replace( ',', '.' ) );
-                streamWorker.Update( EParam.FLIGHT_PATH, cs.distTraveled.ToString( "0" ) + _measure.Distance );
-                streamWorker.Update( EParam.FLIGHT_TIME, ( cs.timeInAir / 60 ).ToString( "0" ) + "." + ( cs.timeInAir % 60 ).ToString( "0" ) );
+                text += streamWorker.ConvertParamToString( EParam.BATTERY_LEVEL, remainingBatteryPercent.ToString( ).Replace( ',', '.' ) );
+                text += streamWorker.ConvertParamToString( EParam.BATTERY_VOLTAGE, cs.battery_voltage.ToString( "0.00" ).Replace( ',', '.' ) + _currentMeasure.Voltage + " | " + bankVoltage.ToString( "0.00" ).Replace( ',', '.' ) + _currentMeasure.Voltage );
+                text += streamWorker.ConvertParamToString( EParam.BATTERY_CAPACITY, FlightPlanner.Instance.lblSpentBattery.Text.Replace( ',', '.' ) + _currentMeasure.Capacity );
+                text += streamWorker.ConvertParamToString( EParam.BATTERY_TIME_LEFT, FlightPlanner.Instance.lblRemainingTime.Text.Replace( ',', '.' ) );
+                text += streamWorker.ConvertParamToString( EParam.FLIGHT_PATH, cs.distTraveled.ToString( "0" ) + _currentMeasure.Distance );
+                text += streamWorker.ConvertParamToString( EParam.FLIGHT_TIME, ( cs.timeInAir / 60 ).ToString( "0" ) + "." + ( cs.timeInAir % 60 ).ToString( "0" ) );
                 // streamWorker.Update( EParam.TARGET_WIDTH, .ToString( "0.#" );
                 // streamWorker.Update( EParam.TARGET_HEIGHT, .ToString( "0.#" );
-                streamWorker.Update( EParam.FLIGHT_STATUS, FlightStatus( cs.mode ) );
-                streamWorker.Update( EParam.FLIGHT_MODE, FlightMode( cs.mode ) );
-                streamWorker.Update( EParam.TARGET_LATITUDE, _targetPoint.Lat.ToString( "0.######" ).Replace( ',', '.' ) );
-                streamWorker.Update( EParam.TARGET_LONGITUDE, _targetPoint.Lng.ToString( "0.######" ).Replace( ',', '.' ) );
-
-                //streamWorker.Visible( EParam.ARMING_STATUS, cs.armed );
+                text += streamWorker.ConvertParamToString( EParam.FLIGHT_STATUS, FlightStatus( cs.mode ) );
+                text += streamWorker.ConvertParamToString( EParam.FLIGHT_MODE, FlightModeTumbler( ) );
+                text += streamWorker.ConvertParamToString( EParam.TARGET_LATITUDE, _targetPoint.Lat.ToString( "0.######" ).Replace( ',', '.' ) );
+                text += streamWorker.ConvertParamToString( EParam.TARGET_LONGITUDE, _targetPoint.Lng.ToString( "0.######" ).Replace( ',', '.' ) );
+                
+                streamWorker.Visible( EParam.ARMING_STATUS, cs.armed );
 
                 var windSpeed = _windSpeedResult;
                 var windAzimuth = _windAzResult;
@@ -5267,8 +5270,13 @@ namespace MissionPlanner
                     }
                 }
 
-                streamWorker.Update( EParam.WIND_SPEED, windSpeed.ToString( "0.#" ).Replace( ',', '.' ) + _measure.Speed );
-                streamWorker.Update( EParam.WIND_ANGLE, windAzimuth.ToString( "0" ) );
+                text += streamWorker.ConvertParamToString( EParam.WIND_SPEED, windSpeed.ToString( "0.#" ).Replace( ',', '.' ) + _currentMeasure.Speed );
+                text += streamWorker.ConvertParamToString( EParam.WIND_ANGLE, windAzimuth.ToString( "0" ) );
+
+                text += streamWorker.ConvertParamToString( EParam.HOME_DISTANCE, dist.ToString( "0" ) + _currentMeasure.Distance );
+                text += streamWorker.ConvertParamToString( EParam.HOME_ANGLE, bearing.ToString( "0" ) );
+
+                streamWorker.Update( text );
 
                 string FlightModeTumbler ( )
                 {
@@ -5278,17 +5286,17 @@ namespace MissionPlanner
 
                         if ( buttons[ 3 ] )
                         {
-                            return _measure.FlightMode[ 0 ];
+                            return _currentMeasure.FlightMode[ 0 ];
                         }
 
                         if ( buttons[ 4 ] )
                         {
-                            return _measure.FlightMode[ 1 ];
+                            return _currentMeasure.FlightMode[ 1 ];
                         }
 
                         if ( buttons[ 5 ] )
                         {
-                            return _measure.FlightMode[ 0 ];
+                            return _currentMeasure.FlightMode[ 0 ];
                         }
                     }
 
@@ -5311,10 +5319,10 @@ namespace MissionPlanner
                 {
                     switch ( flmode )
                     {
-                        case "AltHold": return _measure.FlightMode[ 0 ];
-                        case "Auto": return _measure.FlightMode[ 2 ];
-                        case "Loiter": return _measure.FlightMode[ 1 ];
-                        default: return _measure.FlightMode[ 2 ];
+                        case "AltHold": return _currentMeasure.FlightMode[ 0 ];
+                        case "Auto": return _currentMeasure.FlightMode[ 2 ];
+                        case "Loiter": return _currentMeasure.FlightMode[ 1 ];
+                        default: return _currentMeasure.FlightMode[ 2 ];
                     }
                 }
 
@@ -5322,10 +5330,10 @@ namespace MissionPlanner
                 {
                     switch ( flmode )
                     {
-                        case "RTL": return _measure.FlightStatus[ 0 ];
-                        case "Guided": return _measure.FlightStatus[ 1 ];
-                        case "Land": return _measure.FlightStatus[ 2 ];
-                        case "Takeoff": return _measure.FlightStatus[ 3 ];
+                        case "RTL": return _currentMeasure.FlightStatus[ 0 ];
+                        case "Guided": return _currentMeasure.FlightStatus[ 1 ];
+                        case "Land": return _currentMeasure.FlightStatus[ 2 ];
+                        case "Takeoff": return _currentMeasure.FlightStatus[ 3 ];
                         default: return "";
                     }
                 }
@@ -5363,17 +5371,14 @@ namespace MissionPlanner
                     var scaleLongDown = Math.Cos( Math.Abs( cs.lat ) * 0.0174532925 );
                     var dstlat = ( cs.lat - cs.lat ) * 111319.5;
                     var dstlon = ( cs.lng - cs.lng ) * 111319.5 * scaleLongDown;
-                    var bearing = Math.Atan2( dstlat, -dstlon ) * 57.295775; //absolute home direction
+                    bearing = Math.Atan2( dstlat, -dstlon ) * 57.295775; //absolute home direction
 
                     bearing -= cs.yaw;
 
                     if ( bearing < 0 ) bearing += 360;
                     if ( bearing > 360 ) bearing -= 360;
                     
-                    var dist = cs.DistToHome;
-
-                    streamWorker.Update( EParam.HOME_DISTANCE, dist.ToString( "0" ) + _measure.Distance );
-                    streamWorker.Update( EParam.HOME_ANGLE, bearing.ToString( "0" ) );
+                    dist = cs.DistToHome;
                 }
             }
         }

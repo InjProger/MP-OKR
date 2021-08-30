@@ -21,11 +21,22 @@ namespace MissionPlanner.Utilities.Streams
             _streamWriter = streamWriter;
         }
 
+        public string ConvertParamToString ( EParam eParam, string value )
+        {
+            var paramName = Enum.GetName( typeof( EParam ), eParam );
+            return $"set {paramName} \"{value}\"\n";
+        }
+
         public void Update ( EParam eParam, string value )
         {
             var paramName = Enum.GetName( typeof( EParam ), eParam );
 
             _streamWriter.WriteLine( $"set {paramName} \"{value}\"\n" );
+        }
+
+        public void Update ( string text )
+        {
+            _streamWriter.WriteLine( $"{text}\n" );
         }
 
         public void Visible ( EParam eParam, bool isVisible )
