@@ -43,10 +43,11 @@
         {
             try
             {
+                Lighting.Stop( );
                 MainV2.ComPort.doCommand( ( byte ) MainV2.ComPort.sysidcurrent, ( byte ) MainV2.ComPort.compidcurrent, MAVLink.MAV_CMD.DO_SET_RELAY, 0, 0, 0, 0, 0, 0, 0 );
                 Lighting.IsOn = true;
                 Lighting.LightingType = ELightingType.Constant;
-                Lighting.Stop( );
+                
             }
             catch ( Exception ex )
             {
@@ -69,11 +70,11 @@
         private void btnOff_Click ( object sender, EventArgs e )
         {
             try
-            {   
+            {
+                Lighting.Stop( );
                 MainV2.ComPort.doCommand( ( byte ) MainV2.ComPort.sysidcurrent, ( byte ) MainV2.ComPort.compidcurrent, MAVLink.MAV_CMD.DO_SET_RELAY, 0, 1, 0, 0, 0, 0, 0 );
                 Lighting.IsOn = false;
                 Lighting.LightingType = ELightingType.None;
-                Lighting.Stop( );
             }
             catch ( Exception ex )
             {   

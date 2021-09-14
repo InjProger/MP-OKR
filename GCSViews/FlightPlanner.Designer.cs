@@ -111,7 +111,6 @@ namespace MissionPlanner.GCSViews
             this.but_mincommands = new MissionPlanner.Controls.MyButton();
             this.panelBASE = new System.Windows.Forms.Panel();
             this.panelWaypoints = new System.Windows.Forms.Panel();
-            this.Commands = new MissionPlanner.Controls.MyDataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.label6 = new System.Windows.Forms.Label();
@@ -207,6 +206,7 @@ namespace MissionPlanner.GCSViews
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.Commands = new MissionPlanner.Controls.MyDataGridView();
             this.Command = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Param1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Param2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -249,12 +249,12 @@ namespace MissionPlanner.GCSViews
             this.panel5.SuspendLayout();
             this.panelBASE.SuspendLayout();
             this.panelWaypoints.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Commands)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStripPoly.SuspendLayout();
             this.contextMenuStripZoom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Commands)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -746,50 +746,6 @@ namespace MissionPlanner.GCSViews
             this.panelWaypoints.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelWaypoints.Name = "panelWaypoints";
             this.panelWaypoints.Resize += new System.EventHandler(this.panelWaypoints_Resize);
-            // 
-            // Commands
-            // 
-            this.Commands.AllowUserToAddRows = false;
-            resources.ApplyResources(this.Commands, "Commands");
-            this.Commands.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Command,
-            this.Param1,
-            this.Param2,
-            this.Param3,
-            this.Param4,
-            this.colLat,
-            this.colLon,
-            this.colAlt,
-            this.Frame,
-            this.coordZone,
-            this.coordEasting,
-            this.coordNorthing,
-            this.MGRS,
-            this.Dist,
-            this.Up,
-            this.Down,
-            this.Delete,
-            this.Grad,
-            this.Angle,
-            this.AZ,
-            this.TagData,
-            this.colCk42X,
-            this.colCk42Y,
-            this.colLatDeg,
-            this.colLonDeg});
-            this.Commands.Name = "Commands";
-            this.Commands.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Commands.RowTemplate.Height = 50;
-            this.Commands.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_CellClick);
-            this.Commands.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_CellContentClick);
-            this.Commands.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_CellEndEdit);
-            this.Commands.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Commands_DataError);
-            this.Commands.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.Commands_DefaultValuesNeeded);
-            this.Commands.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Commands_EditingControlShowing);
-            this.Commands.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_RowEnter);
-            this.Commands.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Commands_RowsAdded);
-            this.Commands.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Commands_RowsRemoved);
-            this.Commands.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.Commands_RowValidating);
             // 
             // dataGridViewImageColumn1
             // 
@@ -1423,8 +1379,52 @@ namespace MissionPlanner.GCSViews
             // 
             // timer2
             // 
-            this.timer2.Interval = 1;
+            this.timer2.Interval = 400;
             this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
+            // 
+            // Commands
+            // 
+            this.Commands.AllowUserToAddRows = false;
+            resources.ApplyResources(this.Commands, "Commands");
+            this.Commands.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Command,
+            this.Param1,
+            this.Param2,
+            this.Param3,
+            this.Param4,
+            this.colLat,
+            this.colLon,
+            this.colAlt,
+            this.Frame,
+            this.coordZone,
+            this.coordEasting,
+            this.coordNorthing,
+            this.MGRS,
+            this.Dist,
+            this.Up,
+            this.Down,
+            this.Delete,
+            this.Grad,
+            this.Angle,
+            this.AZ,
+            this.TagData,
+            this.colCk42X,
+            this.colCk42Y,
+            this.colLatDeg,
+            this.colLonDeg});
+            this.Commands.Name = "Commands";
+            this.Commands.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Commands.RowTemplate.Height = 50;
+            this.Commands.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_CellClick);
+            this.Commands.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_CellContentClick);
+            this.Commands.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_CellEndEdit);
+            this.Commands.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Commands_DataError);
+            this.Commands.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.Commands_DefaultValuesNeeded);
+            this.Commands.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Commands_EditingControlShowing);
+            this.Commands.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_RowEnter);
+            this.Commands.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Commands_RowsAdded);
+            this.Commands.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.Commands_RowsRemoved);
+            this.Commands.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.Commands_RowValidating);
             // 
             // Command
             // 
@@ -1606,12 +1606,12 @@ namespace MissionPlanner.GCSViews
             this.panel5.ResumeLayout(false);
             this.panelBASE.ResumeLayout(false);
             this.panelWaypoints.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Commands)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStripPoly.ResumeLayout(false);
             this.contextMenuStripZoom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Commands)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

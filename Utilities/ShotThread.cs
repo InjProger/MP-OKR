@@ -16,8 +16,8 @@
         private bool _isLoop;
         private Thread _thread;
 
-        private bool isFire1 = false;
-        private bool isFire2 = false;
+        /*private bool isFire1 = false;
+        private bool isFire2 = false;*/
 
         public ShotThread ( )
         {
@@ -32,35 +32,22 @@
                 {
                     var buttons = MainV2.Joystick.State.Buttons;
 
-                    if ( buttons[ 7 ] )
-                    {
-                        if ( buttons[ 11 ] && isFire1 == false )
+
+                    if ( buttons[7] && buttons [11] )
                         {
                             Screenshot( );
-                            isFire1 = true;
+                            Thread.Sleep( 2500 );    
                         }
-                    }
 
-                    if ( buttons[ 9 ] )
-                    {
-                        if ( buttons[ 13 ] && isFire2 == false )
-                        {
+                    if ( buttons[ 9 ] && buttons[ 11 ] ) {
                             Screenshot( );
-                            isFire2 = true;
-                        }
-                    }
-
-                    if ( buttons[ 10 ] )
-                    {
-                        isFire1 = false;
-                    }
-
-                    if ( buttons[ 12 ] )
-                    {
-                        isFire2 = false;
+                            Thread.Sleep( 2500 );
                     }
                 }
+                Thread.Sleep( 60 );
             }
+
+            
 
             void Screenshot ( )
             {

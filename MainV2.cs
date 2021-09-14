@@ -2486,7 +2486,7 @@ namespace MissionPlanner
                         }
                     }
                     
-                    Thread.Sleep(20);
+                    Thread.Sleep(50);
                 }
                 catch
                 {
@@ -3210,7 +3210,7 @@ namespace MissionPlanner
 
         private void TabViewBtnStartPlace_Click ( object sender, EventArgs e )
         {
-            FlightPlanner.MainMap.Position = MainV2.ComPort.MAV.cs.HomeLocation;
+            FlightPlanner.MainMap.Position = MainV2.ComPort.MAV.cs.PlannedHomeLocation;
             FlightPlanner.MainMap.Zoom = STARTED_MAP_ZOOM;
         }
 
@@ -3960,8 +3960,6 @@ namespace MissionPlanner
 
             FlightPlanner.pFlightCalculation.Top = MainV2.instance.tabMenuView.Height;
 
-            _shotThread = new ShotThread( );
-            _shotThread.Start( );
         }
 
         JoystickSetup joystickSetup;
@@ -4013,32 +4011,38 @@ namespace MissionPlanner
                         Update( );
 
                         timer2.Start( );
-                        btnDisconnect.Show( );
-                        btnConnect.Hide( );
                         FlightPlanner.MainMap.Position = MainV2.ComPort.MAV.cs.Location;
-                        
+
                         TabMenuEnabled( true );
                         tabMenuView.taskTab.btnArm.Enabled = true;
+
+                        btnDisconnect.Show( );
+                        btnConnect.Hide( );
 
                         EnableMainButtons( true );
                         ConnectButtonEnabled( true );
 
                         if ( !FlightPlanner.Instance.timer1.Enabled )
                         {
-                            FlightPlanner.Instance.timer1.Start();
+                            FlightPlanner.Instance.timer1.Start( );
                         }
 
-                        SetCamera( GetCurrentCamera() );
-                        
+                        SetCamera( GetCurrentCamera( ) );
+
                         var findedValues = MainV2.ComPort.MAV.param.Where( p => p.Name == "RC16_MAX" || p.Name == "RC16_TRIM" );
                         var begPart = findedValues.Where( p => p.Name == "RC16_MAX" ).First( ).Value;
                         var endPart = findedValues.Where( p => p.Name == "RC16_TRIM" ).First( ).Value;
 
                         Configurator.Setting.General.AutoMode.UavId = $"{begPart}{endPart}";
+
+                        _shotThread = new ShotThread( );
+                        _shotThread.Start( );
                     }
                     else
                     {
                         ConnectButtonEnabled( false );
+                        btnDisconnect.Hide( );
+                        btnConnect.Show( );
                     }
                     break;
                 case DialogResult.No:
@@ -5013,13 +5017,14 @@ namespace MissionPlanner
                 DoDisconnect( ComPort );
             }
 
-            if ( !IsConnected )
-            {
-                btnConnect.Show( );
-                btnDisconnect.Hide( );
+            _shotThread = new ShotThread( );
+            _shotThread.Stop( );
 
-                EnableMainButtons( false );
-            }
+            btnConnect.Show( );
+            btnDisconnect.Hide( );
+
+            EnableMainButtons( false );
+            ConnectButtonEnabled( false );
         }
 
         public void BtnConnect_Click( object sender, EventArgs e )
@@ -5510,25 +5515,26 @@ namespace MissionPlanner
             FlightPlanner.MainMap.Overlays[ 4 ].Markers.Clear( );
             FlightPlanner.routesoverlay.Markers.Clear( );
 
-            var gimble = GlbContext.Uav.Device.Gimble;
+            /*var gimble = GlbContext.Uav.Device.Gimble;
             var gimbleAngle = Configurator.Setting.General.AutoMode.GimbleAngle * Math.PI / 180;
             var pitch = _gimbleAngle = gimble is null ? gimbleAngle : GetGimblePitch( );
             var targetDistance = alt / Math.Tan( Math.Abs(  _pitch * Math.PI / 180 - pitch ));
             var EARTH_RAD = 6371000;
             var azimuth = yaw;
             var targetLat = lat + targetDistance * Math.Cos( azimuth * Math.PI / 180 ) / ( EARTH_RAD * Math.PI / 180 );
-            var targetLon = lon + targetDistance * Math.Sin( azimuth * Math.PI / 180 ) / Math.Cos( lat * Math.PI / 180 ) / ( EARTH_RAD * Math.PI / 180 );
+            var targetLon = lon + targetDistance * Math.Sin( azimuth * Math.PI / 180 ) / Math.Cos( lat * Math.PI / 180 ) / ( EARTH_RAD * Math.PI / 180 );*/
 
-            _targetPoint = new PointLatLng( targetLat, targetLon );
+            //_targetPoint = new PointLatLng( targetLat, targetLon );
 
-            var targetMarker = new GMarkerGoogle( _targetPoint, GMarkerGoogleType.target );
+            //var targetMarker = new GMarkerGoogle( _targetPoint, GMarkerGoogleType.target );
             var marker = Common.getMAVMarker( MainV2.ComPort.MAV );
             FlightPlanner.routesoverlay.Markers.Add( marker );
 
-            FlightPlanner.MainMap.Overlays[ 4 ].Markers.Add( targetMarker );
+            //FlightPlanner.MainMap.Overlays[ 4 ].Markers.Add( targetMarker );
         }
 
         private const float magic_force_arm_value = 2989.0f;
+
         private const float magic_force_disarm_value = 21196.0f;
 
         private bool isClick19, isClick18;

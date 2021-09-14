@@ -48,7 +48,6 @@ namespace MissionPlanner
             this.MenuAction = new System.Windows.Forms.ToolStripButton();
             this.MenuArduPilot = new System.Windows.Forms.ToolStripButton();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
-            this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnDisconnect = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -66,6 +65,7 @@ namespace MissionPlanner
             this.lblGpsStatus = new System.Windows.Forms.Label();
             this.tabMenuView = new MissionPlanner.Controls.TabMenus.Views.TabMenuView();
             this.status1 = new MissionPlanner.Controls.Status();
+            this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRSSI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recordOnPicture)).BeginInit();
@@ -179,11 +179,6 @@ namespace MissionPlanner
             this.MainMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MainMenu_ItemClicked);
             this.MainMenu.MouseLeave += new System.EventHandler(this.MainMenu_MouseLeave);
             // 
-            // toolStripConnectionControl
-            // 
-            resources.ApplyResources(this.toolStripConnectionControl, "toolStripConnectionControl");
-            this.toolStripConnectionControl.Name = "toolStripConnectionControl";
-            // 
             // btnConnect
             // 
             resources.ApplyResources(this.btnConnect, "btnConnect");
@@ -293,6 +288,11 @@ namespace MissionPlanner
             resources.ApplyResources(this.status1, "status1");
             this.status1.Name = "status1";
             this.status1.Percent = 0D;
+            // 
+            // toolStripConnectionControl
+            // 
+            resources.ApplyResources(this.toolStripConnectionControl, "toolStripConnectionControl");
+            this.toolStripConnectionControl.Name = "toolStripConnectionControl";
             // 
             // MainV2
             // 

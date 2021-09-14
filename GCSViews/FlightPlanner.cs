@@ -6535,8 +6535,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 if (Settings.Instance.ContainsKey("guided_alt"))
                     alt = Settings.Instance["guided_alt"];
 
-                if (DialogResult.Cancel == InputBox.Show("Enter Alt", "Enter Guided Mode Alt", ref alt))
+                if ( DialogResult.Cancel == InputBox.Show( "Enter Alt", "Enter Guided Mode Alt", ref alt ) )
+                {
+                    IsFlyToPoint = false;
                     return;
+                }
 
                 Settings.Instance["guided_alt"] = alt;
 

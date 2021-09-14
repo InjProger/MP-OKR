@@ -523,13 +523,29 @@ namespace MissionPlanner.GCSViews.Setups.Views
             
             void UpdateHud ( )
             {
-                FlightPlanner.Instance.CoordSystemSelector( );
-                GlbContext.VisibleHud( );
+                try
+                {
+                    FlightPlanner.Instance.CoordSystemSelector( );
+                    GlbContext.VisibleHud( );
+                }
+                catch ( Exception exc )
+                {
+                    Console.WriteLine( "UpdateHud" );
+                    Console.WriteLine( exc.Message );
+                }
             }
 
             void FileSave ( )
             {
-                Configurator.Save( );
+                try
+                {
+                    Configurator.Save( );
+                }
+                catch ( Exception exc )
+                {
+                    Console.WriteLine( "FileSave" );
+                    Console.WriteLine( exc.Message );
+                }
             }
 
             void UpdateUav ( )
