@@ -82,10 +82,15 @@ namespace MissionPlanner.GCSViews.Setups.Views
             ReturnToLaunch = 2
         }
 
+        public enum CrtActions {
+            None = 0,
+            Land = 1
+        }
+
         private void CommandsCmbFilling ( )
         {
             cmbLowBatteryActions.DataSource = Enum.GetValues( typeof( Actions ) );
-            cmbCrtBatteryActions.DataSource = Enum.GetValues( typeof( Actions ) );
+            cmbCrtBatteryActions.DataSource = Enum.GetValues( typeof( CrtActions ) );
             /*var resourceManager = new ResourceManager( GetType( ).FullName, Assembly.GetExecutingAssembly( ) );
             var None = resourceManager.GetString( "NoneText", CultureInfo.CurrentUICulture );
             var Land = resourceManager.GetString( "LandText", CultureInfo.CurrentUICulture );
@@ -223,7 +228,7 @@ namespace MissionPlanner.GCSViews.Setups.Views
                     return new LowBatteryActions( )
                     {
                         lowBatteryAction = getIndexAction(cmbLowBatteryActions),
-                        crtBatteryAction = getIndexAction(cmbCrtBatteryActions)
+                        crtBatteryAction = getIndexCrtAction(cmbCrtBatteryActions)
                     };
                 }
 
@@ -240,6 +245,22 @@ namespace MissionPlanner.GCSViews.Setups.Views
                             break;
                             }
                         return index ;
+                }
+
+                int getIndexCrtAction ( ComboBox comboBox )
+                {
+                    int index = 0;
+                    var command = comboBox.SelectedValue;
+                    switch ( command )
+                    {
+                        case CrtActions.None:
+                            index = 0;
+                            break;
+                        case CrtActions.Land:
+                            index = 1;
+                            break;
+                    }
+                    return index;
                 }
 
                 EIkrlFailtureActions CreateEIkrlFailtureActions ( )
@@ -488,10 +509,10 @@ namespace MissionPlanner.GCSViews.Setups.Views
 
                 switch ( gpsFailtureActionValue )
                 {
-                    case 0:
+                    case 0.8:
                         rbLanding.Checked = true;
                         break;
-                    case 0.8:
+                    case 0:
                         rbAutoManeuvering.Checked = true;
                         break;
                 }
@@ -572,7 +593,7 @@ namespace MissionPlanner.GCSViews.Setups.Views
                         }
                     }
 
-                    var gpsFailtureActionn = rbLanding.Checked ? 0 : 0.8;
+                    var gpsFailtureActionn = rbLanding.Checked ? 0.8 : 0;
                     var circleRadius = int.Parse( tbPatrolRadius.Text ) * 100;
 
                     MainV2.ComPort.setParam( "RALLY_INCL_HOME", useStartPlace );
