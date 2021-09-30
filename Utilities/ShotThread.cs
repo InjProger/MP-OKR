@@ -39,7 +39,7 @@
                             Thread.Sleep( 2500 );    
                         }
 
-                    if ( buttons[ 9 ] && buttons[ 11 ] ) {
+                    if ( buttons[ 9 ] && buttons[ 13 ] ) {
                             Screenshot( );
                             Thread.Sleep( 2500 );
                     }
